@@ -1,0 +1,17 @@
+action_id,action,fault_id,sequence,cost,downtime,details
+A01,Inspect bearing lubrication and condition,F01,1,LOW,LOW,Check lubricant level/condition and bearing noise/temperature before replacement.
+A02,Replace damaged bearing,F01,2,MEDIUM,MEDIUM,"Replace bearing if inspection confirms wear, spalling, seizure, or excessive clearance."
+A03,Improve suction conditions / verify NPSH margin,F02,1,LOW,MEDIUM,"Check liquid level, suction losses, temperature, valves, and suction piping restrictions."
+A04,Inspect impeller for cavitation erosion,F02,2,MEDIUM,MEDIUM,Inspect impeller surfaces if cavitation persists or performance has degraded.
+A05,Laser/dial align motor and pump shafts,F03,1,MEDIUM,MEDIUM,Correct angular/parallel misalignment after verifying soft foot and pipe strain.
+A06,Clean impeller and internal passages,F04,1,LOW,MEDIUM,Isolate pump and remove deposits or foreign material from impeller passages.
+A07,Inspect/replace mechanical seal,F05,1,MEDIUM,MEDIUM,"Inspect seal faces, flush plan, elastomers, shaft sleeve, and replace damaged seal parts."
+A08,Clean suction strainer and inspect suction line,F06,1,LOW,LOW,Remove blockage; verify suction valve is open and piping is unobstructed.
+A09,Stop pump and restore prime/liquid supply,F07,1,LOW,HIGH,Do not continue dry operation; restore liquid and investigate why prime was lost.
+A10,Inspect motor load and process operating point,F08,1,LOW,MEDIUM,Compare current/load to expected duty; check mechanical drag and process overload.
+A11,Inspect and repair/replace coupling elements,F09,1,MEDIUM,MEDIUM,"Check coupling wear, looseness, fasteners, flexible elements, and alignment."
+A12,Inspect/repair or replace impeller,F10,1,HIGH,HIGH,"Open pump after isolation; inspect erosion, cracks, blade damage, and clearances."
+A13,Open/verify discharge valve and minimum-flow path,F11,1,LOW,LOW,Correct excessive discharge restriction and avoid prolonged near-zero-flow operation.
+A14,Leak-test suction piping and fittings,F12,1,LOW,MEDIUM,Tighten fittings/gaskets and inspect suction line for air ingress.
+A15,"Inspect hold-down bolts, soft foot and foundation",F13,1,MEDIUM,MEDIUM,"Tighten/repair base, correct soft foot, and verify grouting/foundation integrity."
+A16,Check phase voltage/current balance and connections,F14,1,MEDIUM,MEDIUM,"Qualified electrical personnel should inspect phase balance, terminals, and supply."

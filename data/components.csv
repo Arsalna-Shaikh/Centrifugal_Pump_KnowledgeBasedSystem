@@ -1,0 +1,11 @@
+component_id,component_name,category,description
+C01,Pump Casing,Hydraulic,Contains fluid and converts velocity to pressure.
+C02,Impeller,Hydraulic,Transfers rotational energy to the fluid.
+C03,Shaft,Mechanical,Transmits torque from driver to impeller.
+C04,Bearings,Mechanical,Support shaft and control radial/axial movement.
+C05,Mechanical Seal,Sealing,Limits leakage along the rotating shaft.
+C06,Coupling,Mechanical,Connects motor shaft to pump shaft.
+C07,Suction Line / Strainer,Hydraulic,Supplies liquid to pump inlet.
+C08,Discharge Line / Valve,Hydraulic,Controls pump discharge flow.
+C09,Electric Motor,Electrical,Provides mechanical drive power.
+C10,Baseplate / Foundation,Structural,Maintains alignment and structural rigidity.

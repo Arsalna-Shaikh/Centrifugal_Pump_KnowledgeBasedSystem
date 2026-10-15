@@ -1,0 +1,15 @@
+fault_id,fault_name,component_id,safety_priority,repair_cost,downtime,description
+F01,Bearing Wear / Failure,C04,HIGH,Medium,Medium,Progressive bearing damage or lubrication-related distress.
+F02,Cavitation,C02,HIGH,Low,Medium,Vapor bubble formation/collapse due to inadequate suction conditions.
+F03,Shaft Misalignment,C03,HIGH,Medium,Medium,Pump and motor shaft centerlines are not correctly aligned.
+F04,Impeller Blockage / Fouling,C02,MEDIUM,Low,Medium,Deposits or foreign material restrict impeller passages.
+F05,Mechanical Seal Failure,C05,HIGH,Medium,Medium,"Seal faces or elastomers are worn, damaged, or thermally distressed."
+F06,Suction Blockage / Clogged Strainer,C07,HIGH,Low,Low,Restriction on suction side reduces available flow and inlet pressure.
+F07,Dry Running / Loss of Prime,C01,CRITICAL,Medium,High,"Pump operates with insufficient liquid, causing loss of cooling/lubrication."
+F08,Motor Overload,C09,HIGH,Medium,Medium,Driver current/power exceeds expected operating condition.
+F09,Coupling Damage / Looseness,C06,HIGH,Medium,Medium,"Flexible element wear, looseness, or coupling damage."
+F10,Impeller Damage / Erosion,C02,HIGH,High,High,"Impeller surfaces are eroded, cracked, or otherwise mechanically damaged."
+F11,Discharge Restriction / Closed Valve,C08,HIGH,Low,Low,Excessive discharge-side restriction moves pump toward low-flow operation.
+F12,Air Ingress on Suction Side,C07,HIGH,Low,Medium,Air enters suction piping or fittings and disrupts hydraulic performance.
+F13,Base / Foundation Looseness,C10,MEDIUM,Medium,Medium,"Loose hold-down bolts, soft foot, or weak foundation increases vibration."
+F14,Electrical Supply Imbalance,C09,HIGH,Medium,Medium,Voltage/current phase imbalance causes motor heating and unstable operation.

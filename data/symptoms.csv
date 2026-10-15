@@ -1,0 +1,23 @@
+symptom_id,symptom_name,key,category
+S01,High overall vibration,vibration_high,Mechanical
+S02,Bearing temperature high,bearing_temp_high,Thermal
+S03,Abnormal grinding/rumbling noise,grinding_noise,Acoustic
+S04,Crackling / gravel-like noise,crackling_noise,Acoustic
+S05,Low discharge pressure,discharge_pressure_low,Hydraulic
+S06,Low flow rate,flow_low,Hydraulic
+S07,Low suction pressure / high vacuum,suction_pressure_low,Hydraulic
+S08,Visible seal leakage,seal_leakage,Visual
+S09,Motor current high,motor_current_high,Electrical
+S10,Motor temperature high,motor_temp_high,Thermal
+S11,Pressure fluctuating,pressure_fluctuation,Hydraulic
+S12,Flow fluctuating,flow_fluctuation,Hydraulic
+S13,No / near-zero flow,no_flow,Hydraulic
+S14,Pump fails to prime,prime_failure,Operational
+S15,Shaft/coupling vibration dominant,coupling_vibration,Mechanical
+S16,Seal area temperature high,seal_temp_high,Thermal
+S17,Discharge pressure unusually high,discharge_pressure_high,Hydraulic
+S18,Motor speed unstable,speed_unstable,Electrical
+S19,Localized baseplate vibration,base_vibration,Mechanical
+S20,Air bubbles / frothy discharge,air_bubbles,Visual
+S21,Efficiency / developed head reduced,efficiency_low,Performance
+S22,Rapid temperature rise with low flow,rapid_temp_rise,Thermal

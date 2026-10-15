@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Bearing failure",
+    "manual_evidence": [
+      "vibration_high",
+      "bearing_temp_high",
+      "grinding_noise"
+    ]
+  },
+  {
+    "name": "Cavitation",
+    "manual_evidence": [
+      "crackling_noise",
+      "suction_pressure_low",
+      "pressure_fluctuation",
+      "flow_low"
+    ]
+  },
+  {
+    "name": "Dry running",
+    "manual_evidence": [
+      "no_flow",
+      "prime_failure",
+      "rapid_temp_rise",
+      "seal_temp_high"
+    ]
+  },
+  {
+    "name": "Air ingress",
+    "manual_evidence": [
+      "air_bubbles",
+      "flow_fluctuation",
+      "pressure_fluctuation",
+      "discharge_pressure_low"
+    ]
+  },
+  {
+    "name": "Discharge restriction",
+    "manual_evidence": [
+      "discharge_pressure_high",
+      "flow_low",
+      "rapid_temp_rise"
+    ]
+  }
+]

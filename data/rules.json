@@ -1,0 +1,153 @@
+[
+  {
+    "id": "R01",
+    "conditions": [
+      "vibration_high",
+      "bearing_temp_high",
+      "grinding_noise"
+    ],
+    "fault_id": "F01",
+    "bonus": 4,
+    "explanation": "High vibration + hot bearing + rumbling/grinding strongly supports bearing distress."
+  },
+  {
+    "id": "R02",
+    "conditions": [
+      "crackling_noise",
+      "suction_pressure_low",
+      "pressure_fluctuation"
+    ],
+    "fault_id": "F02",
+    "bonus": 5,
+    "explanation": "Crackling noise with poor suction condition and pressure fluctuation is characteristic of cavitation."
+  },
+  {
+    "id": "R03",
+    "conditions": [
+      "coupling_vibration",
+      "vibration_high",
+      "bearing_temp_high"
+    ],
+    "fault_id": "F03",
+    "bonus": 4,
+    "explanation": "Coupling-dominant vibration with heating is consistent with shaft misalignment."
+  },
+  {
+    "id": "R04",
+    "conditions": [
+      "flow_low",
+      "discharge_pressure_low",
+      "efficiency_low"
+    ],
+    "fault_id": "F04",
+    "bonus": 4,
+    "explanation": "Low flow/head and reduced efficiency can indicate impeller fouling or blockage."
+  },
+  {
+    "id": "R05",
+    "conditions": [
+      "seal_leakage",
+      "seal_temp_high"
+    ],
+    "fault_id": "F05",
+    "bonus": 5,
+    "explanation": "Leakage together with elevated seal-area temperature strongly supports seal failure."
+  },
+  {
+    "id": "R06",
+    "conditions": [
+      "suction_pressure_low",
+      "flow_low",
+      "discharge_pressure_low"
+    ],
+    "fault_id": "F06",
+    "bonus": 4,
+    "explanation": "Poor suction pressure with low flow/head supports suction restriction."
+  },
+  {
+    "id": "R07",
+    "conditions": [
+      "no_flow",
+      "prime_failure",
+      "rapid_temp_rise"
+    ],
+    "fault_id": "F07",
+    "bonus": 7,
+    "explanation": "Loss of prime/no flow with rapid heating is a critical dry-running pattern."
+  },
+  {
+    "id": "R08",
+    "conditions": [
+      "motor_current_high",
+      "motor_temp_high"
+    ],
+    "fault_id": "F08",
+    "bonus": 5,
+    "explanation": "High current with motor heating supports overload."
+  },
+  {
+    "id": "R09",
+    "conditions": [
+      "coupling_vibration",
+      "grinding_noise"
+    ],
+    "fault_id": "F09",
+    "bonus": 4,
+    "explanation": "Coupling vibration plus mechanical noise supports coupling damage/looseness."
+  },
+  {
+    "id": "R10",
+    "conditions": [
+      "flow_low",
+      "discharge_pressure_low",
+      "vibration_high",
+      "efficiency_low"
+    ],
+    "fault_id": "F10",
+    "bonus": 4,
+    "explanation": "Reduced hydraulic performance plus vibration can result from impeller damage/erosion."
+  },
+  {
+    "id": "R11",
+    "conditions": [
+      "discharge_pressure_high",
+      "flow_low",
+      "rapid_temp_rise"
+    ],
+    "fault_id": "F11",
+    "bonus": 6,
+    "explanation": "High discharge pressure, low flow and rapid heating support excessive discharge restriction."
+  },
+  {
+    "id": "R12",
+    "conditions": [
+      "air_bubbles",
+      "flow_fluctuation",
+      "pressure_fluctuation"
+    ],
+    "fault_id": "F12",
+    "bonus": 5,
+    "explanation": "Air bubbles with unstable flow/pressure support suction-side air ingress."
+  },
+  {
+    "id": "R13",
+    "conditions": [
+      "base_vibration",
+      "vibration_high"
+    ],
+    "fault_id": "F13",
+    "bonus": 5,
+    "explanation": "Localized base vibration with high overall vibration supports foundation/base looseness."
+  },
+  {
+    "id": "R14",
+    "conditions": [
+      "motor_temp_high",
+      "speed_unstable",
+      "motor_current_high"
+    ],
+    "fault_id": "F14",
+    "bonus": 5,
+    "explanation": "Motor heating, unstable speed and abnormal current support electrical supply imbalance."
+  }
+]
