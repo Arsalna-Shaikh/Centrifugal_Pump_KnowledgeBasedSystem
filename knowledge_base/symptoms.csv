@@ -1,0 +1,24 @@
+symptom_id,key,name,kind,legacy_ids,description
+SYM-01,vibration_high,High overall vibration,sensor,S01,Vibration velocity above threshold (THR-01/02/03)
+SYM-02,bearing_temp_high,High bearing temperature,sensor,S02,
+SYM-03,seal_temp_high,High seal-area temperature,sensor,S16,
+SYM-04,motor_temp_high,High motor temperature,sensor,S10,
+SYM-05,flow_low,Low flow,sensor,S06,Flow below threshold on a rated or baseline basis
+SYM-06,no_flow,No / near-zero flow,sensor,S13,Implies flow_low (REL SR-01)
+SYM-07,head_low,Low pump head (differential pressure),sensor,S05,Replaces legacy absolute discharge_pressure_low
+SYM-08,head_high,High pump head (toward shut-off),sensor,S17,Replaces legacy absolute discharge_pressure_high
+SYM-09,suction_pressure_low,Low suction pressure,sensor,S07,
+SYM-10,motor_current_high,High motor current,sensor,S09,
+SYM-11,motor_current_low,Low motor current,sensor,,New: lower current at low flow in radial pumps (S-01 p.17)
+SYM-12,pressure_fluctuation,Pressure fluctuating,sensor,S11,Kept separate from flow_fluctuation (KR-1 correction 1)
+SYM-13,crackling_noise,Crackling / popping noise,observed,S04,'Marbles' sound (S-01 p.20)
+SYM-14,grinding_noise,Grinding / rumbling noise,observed,S03,
+SYM-15,seal_leakage,Seal leakage above normal,observed,S08,
+SYM-16,coupling_vibration,Coupling-dominant vibration,observed,S15,
+SYM-17,air_bubbles,Air bubbles / frothy discharge,observed,S20,
+SYM-18,prime_failure,Pump fails to prime / loses prime,observed,S14,
+SYM-19,rapid_temp_rise,Rapid temperature rise,trend,S22,Legacy wording 'with low flow' removed; flow is its own symptom
+SYM-20,speed_unstable,Motor speed unstable,observed,S18,
+SYM-21,performance_decline,Sustained decline in pump performance,trend,S21,Replaces legacy efficiency_low (S-01 p.35 'decline in the pump's performance')
+SYM-22,flow_fluctuation,Flow fluctuating,sensor,S12,Restored as separate symptom (KR-1 correction 1)
+SYM-23,liquid_temp_above_design,Liquid temperature above design value,sensor,,New: cause indicator for CAU-02

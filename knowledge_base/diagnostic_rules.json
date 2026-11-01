@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "notes": "support_level = quality of the knowledge behind the rule (weakest relationship used, or weaker if an assumption is unvalidated). likelihood = diagnostic strength of the pattern when it matches. The two are recorded separately (KR-1 correction 4). Symptom lists refer to observation states: symptoms_all / symptoms_any must be 'present'; symptoms_absent must be known 'absent' (unknown never counts as absent).",
+  "rules": [
+    {
+      "rule_id": "R-CAV-1", "layer": "L2_fault", "legacy_ids": ["R02"],
+      "conditions": {"symptoms_all": ["SYM-13"], "symptoms_any": ["SYM-09", "SYM-07"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-01"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-06", "MA-10", "MA-08"], "source_ids": ["S-01", "S-04"], "assumptions": [],
+      "explanation": "Crackling/popping noise with low suction pressure or low head is characteristic of cavitation (S-01 p.20; S-04)."
+    },
+    {
+      "rule_id": "R-CAV-2", "layer": "L2_fault", "legacy_ids": [],
+      "conditions": {"tests": [{"test_id": "TST-01", "result": "NPSHA_below_NPSH3_plus_margin"}]},
+      "conclusion": {"type": "fault", "targets": ["FLT-01"], "likelihood": "confirmed"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["CF-20"], "source_ids": ["S-02"], "assumptions": [],
+      "explanation": "NPSH available below NPSH3 plus the required margin means cavitation conditions exist (S-02)."
+    },
+    {
+      "rule_id": "R-DRY-1", "layer": "L2_fault", "legacy_ids": ["R07"],
+      "conditions": {"symptoms_all": ["SYM-06", "SYM-18"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-02"], "likelihood": "likely"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["MA-29", "MA-30"], "source_ids": ["S-01", "S-11"], "assumptions": [],
+      "explanation": "No flow together with loss of prime indicates dry running (S-11 items 1-7; S-01 pp.22 and 31). Safety rule SAF-01 applies."
+    },
+    {
+      "rule_id": "R-DRY-2", "layer": "L2_fault", "legacy_ids": ["R07"],
+      "conditions": {"symptoms_all": ["SYM-06"], "symptoms_any": ["SYM-03", "SYM-02", "SYM-19"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-02"], "likelihood": "possible"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["MA-29", "MA-32", "MA-33", "MA-31"], "source_ids": ["S-06", "S-08", "S-11"], "assumptions": [],
+      "explanation": "No flow with overheating of seal, bearings or casing suggests dry running (S-06 overheating). Safety rule SAF-01 applies."
+    },
+    {
+      "rule_id": "R-AIR-1", "layer": "L2_fault", "legacy_ids": ["R12"],
+      "conditions": {"symptoms_any": ["SYM-05", "SYM-07"], "symptoms_all": ["SYM-18"], "symptoms_absent": ["SYM-06"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-03"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-62", "MA-61", "MA-58"], "source_ids": ["S-01", "S-03", "S-11"],
+      "assumptions": [{"type": "exclusion", "validation_status": "unvalidated", "text": "Requiring no_flow to be absent separates partial air ingress from full dry running"}],
+      "explanation": "Reduced flow or head with priming problems while some flow remains indicates air/gas ingress (S-03; S-01 pp.22 and 31)."
+    },
+    {
+      "rule_id": "R-AIR-2", "layer": "L2_fault", "legacy_ids": ["R12"],
+      "conditions": {"symptoms_all": ["SYM-17", "SYM-22", "SYM-12"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-03"], "likelihood": "possible"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["MA-57", "MA-59", "MA-60"], "source_ids": ["P-01"], "assumptions": [],
+      "explanation": "Legacy rule R12 (air bubbles + flow fluctuation + pressure fluctuation). No external source read supports these symptoms for air ingress."
+    },
+    {
+      "rule_id": "R-BRG-1", "layer": "L2_fault", "legacy_ids": ["R01"],
+      "conditions": {"symptoms_all": ["SYM-01", "SYM-02"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-04"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-01", "MA-02"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "High vibration with high bearing temperature indicates bearing distress (S-01 pp.34 and 36)."
+    },
+    {
+      "rule_id": "R-BRG-2", "layer": "L2_fault", "legacy_ids": ["R01"],
+      "conditions": {"symptoms_all": ["SYM-14"], "symptoms_any": ["SYM-01", "SYM-02"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-04"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-03", "MA-01", "MA-02"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Bearing noise with high vibration or temperature indicates bearing wear (S-01 p.34)."
+    },
+    {
+      "rule_id": "R-MIS-1", "layer": "L2_fault", "legacy_ids": [],
+      "conditions": {"tests": [{"test_id": "TST-02", "result": "out_of_tolerance"}]},
+      "conclusion": {"type": "fault", "targets": ["FLT-05"], "likelihood": "confirmed"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["CF-17"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Alignment measured outside the pump's tolerance confirms misalignment (S-01 p.34)."
+    },
+    {
+      "rule_id": "R-MIS-2", "layer": "L2_fault", "legacy_ids": ["R03"],
+      "conditions": {"symptoms_all": ["SYM-16", "SYM-01", "SYM-02"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-05"], "likelihood": "possible"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["MA-15", "MA-14", "MA-16"], "source_ids": ["P-01", "S-13"], "assumptions": [],
+      "explanation": "Legacy rule R03. Coupling vibration and bearing temperature links are unvalidated (KA-1 C-05); request an alignment check (R-T-02)."
+    },
+    {
+      "rule_id": "R-SEAL-1", "layer": "L2_fault", "legacy_ids": ["R05"],
+      "conditions": {"symptoms_all": ["SYM-15"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-06"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-25"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Seal leakage above normal indicates seal failure (S-01 pp.34-35); confirm with TST-06."
+    },
+    {
+      "rule_id": "R-SEAL-2", "layer": "L2_fault", "legacy_ids": ["R05"],
+      "conditions": {"symptoms_all": ["SYM-15", "SYM-03"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-06"], "likelihood": "likely"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["MA-25", "MA-26"], "source_ids": ["S-01", "S-08"], "assumptions": [],
+      "explanation": "Seal leakage with high seal-area temperature indicates seal failure with thermal distress (S-08)."
+    },
+    {
+      "rule_id": "R-IMP-1", "layer": "L2_fault", "legacy_ids": ["R10"],
+      "conditions": {"symptoms_all": ["SYM-21", "SYM-01"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-07"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-48", "MA-45"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Performance decline with vibration (unbalance) indicates impeller damage (S-01 pp.21 and 35)."
+    },
+    {
+      "rule_id": "R-WR-1", "layer": "L2_fault", "legacy_ids": [],
+      "conditions": {"symptoms_all": ["SYM-21"], "symptoms_absent": ["SYM-01"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-10"], "likelihood": "possible"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["MA-63"], "source_ids": ["S-01"],
+      "assumptions": [{"type": "discriminator", "validation_status": "unvalidated", "text": "Absence of vibration as a discriminator between wear-ring wear and impeller damage is not stated by any source read"}],
+      "explanation": "Performance decline is a documented sign of wear-ring wear (S-01 p.35); the 'no vibration' distinction is unvalidated. Request TST-09/TST-11 (R-T-03)."
+    },
+    {
+      "rule_id": "R-BLK-1", "layer": "L2_fault", "legacy_ids": ["R04"],
+      "conditions": {"symptoms_any": ["SYM-06", "SYM-05"], "symptoms_all": ["SYM-07"], "symptoms_absent": ["SYM-18", "SYM-13"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-08"], "likelihood": "possible"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["MA-24", "MA-19", "MA-20"], "source_ids": ["S-11"],
+      "assumptions": [{"type": "exclusion", "validation_status": "unvalidated", "text": "Absence of prime failure and crackling noise is used only to exclude competing faults"}],
+      "explanation": "No/low flow with low head points to an obstructed impeller or passages (S-11 items 7, 11, 21)."
+    },
+    {
+      "rule_id": "R-DIS-1", "layer": "L2_fault", "legacy_ids": ["R11"],
+      "conditions": {"symptoms_all": ["SYM-05", "SYM-19"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-09"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-51", "MA-52"], "source_ids": ["S-02", "S-07"], "assumptions": [],
+      "explanation": "Low flow with rapid temperature rise indicates operation near shut-off (S-07; S-02). Safety rule SAF-02 applies. Legacy head_high condition dropped (unvalidated)."
+    },
+    {
+      "rule_id": "R-DIS-2", "layer": "L2_fault", "legacy_ids": [],
+      "conditions": {"symptoms_all": ["SYM-05", "SYM-11"], "context": {"PAR-01": "radial"}},
+      "conclusion": {"type": "fault", "targets": ["FLT-09"], "likelihood": "possible"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["MA-51", "MA-56"], "source_ids": ["S-01", "S-02"], "assumptions": [],
+      "explanation": "In a radial pump, low flow with low motor current is consistent with a restricted discharge (S-01 p.17)."
+    },
+    {
+      "rule_id": "R-MOT-1", "layer": "L2_fault", "legacy_ids": ["R08"],
+      "conditions": {"symptoms_all": ["SYM-10", "SYM-04"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-11"], "likelihood": "likely"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["MA-36", "MA-37"], "source_ids": ["S-11"], "assumptions": [],
+      "explanation": "High current with high motor temperature indicates motor overload or an electrical fault (S-11 items 33 and 40)."
+    },
+    {
+      "rule_id": "R-CPL-1", "layer": "L2_fault", "legacy_ids": ["R09"],
+      "conditions": {"symptoms_all": ["SYM-16", "SYM-14"]},
+      "conclusion": {"type": "fault", "targets": ["FLT-12"], "likelihood": "possible"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["MA-41", "MA-43"], "source_ids": ["P-01"], "assumptions": [],
+      "explanation": "Legacy rule R09; no external source read."
+    },
+    {
+      "rule_id": "N-01", "layer": "L2_negative", "legacy_ids": [],
+      "conditions": {"symptoms_all": ["SYM-10"], "context": {"PAR-01": "radial"}},
+      "conclusion": {"type": "lower", "targets": ["FLT-08", "FLT-09"], "likelihood": "not_applicable"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["AA-01", "AA-02"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Radial pumps draw less current at low flow, so high current argues against blockage and discharge restriction (S-01 p.17)."
+    },
+    {
+      "rule_id": "N-02", "layer": "L2_negative", "legacy_ids": [],
+      "conditions": {"symptoms_absent": ["SYM-18", "SYM-05"]},
+      "conclusion": {"type": "block", "targets": ["FLT-02"], "likelihood": "not_applicable"},
+      "support_level": "Definitional", "validation_status": "not_applicable",
+      "relationship_ids": [], "source_ids": ["P-05"], "assumptions": [],
+      "explanation": "Pump is primed and flow is not low, so it is not running dry."
+    },
+    {
+      "rule_id": "N-03", "layer": "L2_negative", "legacy_ids": [],
+      "conditions": {"symptoms_all": ["SYM-08"]},
+      "conclusion": {"type": "lower", "targets": ["FLT-01", "FLT-07", "FLT-08", "FLT-10"], "likelihood": "not_applicable"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["AA-03", "AA-04", "AA-05", "AA-06"], "source_ids": ["S-01", "S-11"], "assumptions": [],
+      "explanation": "These faults reduce head, so high head argues against them."
+    },
+    {
+      "rule_id": "R-C-01", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-01", "min_status": "possible"}], "symptoms_all": ["SYM-23"]},
+      "conclusion": {"type": "cause", "targets": ["CAU-02"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["CB-02", "IB-13"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Cavitation with liquid above design temperature points to elevated temperature as the cause (S-01 p.20)."
+    },
+    {
+      "rule_id": "R-C-02", "layer": "L3_cause", "legacy_ids": ["R06"],
+      "conditions": {"faults_all": [{"fault_id": "FLT-01", "min_status": "possible"}], "tests": [{"test_id": "TST-11", "result": "strainer_clogged"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-05"], "likelihood": "confirmed"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["CB-07", "CF-03"], "source_ids": ["S-01", "S-11"], "assumptions": [],
+      "explanation": "Cavitation with a clogged strainer found on inspection: suction fouling is the cause (S-01 p.20; S-11 item 15). Replaces legacy fault rule R06."
+    },
+    {
+      "rule_id": "R-C-03", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_any": [{"fault_id": "FLT-02", "min_status": "possible"}, {"fault_id": "FLT-03", "min_status": "possible"}], "tests": [{"test_id": "TST-08", "result": "low_level_or_vortex"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-08"], "likelihood": "confirmed"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["CB-11", "CB-12", "CF-04"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Low liquid level or vortex at the suction confirms it as the cause of air entry / loss of prime (S-01 p.31)."
+    },
+    {
+      "rule_id": "R-C-04", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-04", "min_status": "possible"}], "tests": [{"test_id": "TST-04", "result": "lubricant_degraded"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-12"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["CB-17", "CF-06"], "source_ids": ["S-01"], "assumptions": [],
+      "explanation": "Bearing failure with degraded lubricant points to lubrication as the cause (S-01 pp.16 and 36)."
+    },
+    {
+      "rule_id": "R-C-05", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-04", "min_status": "possible"}], "tests": [{"test_id": "TST-04", "result": "contamination_found"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-15"], "likelihood": "likely"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["CB-20", "CF-07"], "source_ids": ["S-12"], "assumptions": [],
+      "explanation": "Bearing failure with contaminated lubricant points to contamination (S-12)."
+    },
+    {
+      "rule_id": "R-C-06", "layer": "L3_chain", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-05", "min_status": "confirmed"}], "faults_any": [{"fault_id": "FLT-04", "min_status": "possible"}, {"fault_id": "FLT-06", "min_status": "possible"}]},
+      "conclusion": {"type": "chain", "targets": ["LT-09", "LT-10"], "likelihood": "possible"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["LT-09", "LT-10"], "source_ids": ["S-13", "S-12"], "assumptions": [],
+      "explanation": "Confirmed misalignment can be causing the bearing or seal damage through vibration (S-13)."
+    },
+    {
+      "rule_id": "R-C-07", "layer": "L3_chain", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-07", "min_status": "likely"}, {"fault_id": "FLT-01", "min_status": "possible"}]},
+      "conclusion": {"type": "chain", "targets": ["LT-01"], "likelihood": "likely"},
+      "support_level": "Strong", "validation_status": "validated",
+      "relationship_ids": ["LT-01"], "source_ids": ["S-01", "S-04"], "assumptions": [],
+      "explanation": "Cavitation is a documented cause of impeller erosion (S-01 pp.20 and 35)."
+    },
+    {
+      "rule_id": "R-C-08", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-11", "min_status": "possible"}], "tests": [{"test_id": "TST-12", "result": "low_voltage_or_open_phase"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-35"], "likelihood": "confirmed"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["CB-41", "CF-15"], "source_ids": ["S-11"], "assumptions": [],
+      "explanation": "Motor fault with low voltage/frequency or an open phase found (S-11 items 5 and 40)."
+    },
+    {
+      "rule_id": "R-C-09", "layer": "L3_cause", "legacy_ids": ["R14"],
+      "conditions": {"faults_all": [{"fault_id": "FLT-11", "min_status": "possible"}], "tests": [{"test_id": "TST-12", "result": "phase_imbalance"}]},
+      "conclusion": {"type": "cause", "targets": ["CAU-39"], "likelihood": "likely"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["CB-45", "CF-21"], "source_ids": ["P-01"], "assumptions": [],
+      "explanation": "Motor fault with measured phase imbalance: electrical supply imbalance (legacy F14/A16; no external source read)."
+    },
+    {
+      "rule_id": "R-C-10", "layer": "L3_cause", "legacy_ids": ["R14"],
+      "conditions": {"faults_all": [{"fault_id": "FLT-11", "min_status": "possible"}], "symptoms_all": ["SYM-20"]},
+      "conclusion": {"type": "cause", "targets": ["CAU-39"], "likelihood": "possible"},
+      "support_level": "Unvalidated", "validation_status": "unvalidated",
+      "relationship_ids": ["CB-45", "IB-11"], "source_ids": ["P-01"], "assumptions": [],
+      "explanation": "Legacy rule R14: motor fault with unstable speed suggests supply imbalance; request TST-12."
+    },
+    {
+      "rule_id": "R-C-11", "layer": "L3_cause", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-06", "min_status": "possible"}], "symptoms_all": ["SYM-03"]},
+      "conclusion": {"type": "cause", "targets": ["CAU-24"], "likelihood": "possible"},
+      "support_level": "Moderate", "validation_status": "validated",
+      "relationship_ids": ["CB-29", "MA-26"], "source_ids": ["S-01", "S-08"], "assumptions": [],
+      "explanation": "Seal failure with high seal temperature suggests loss of seal lubrication (S-01 p.16; S-08)."
+    },
+    {
+      "rule_id": "R-T-01", "layer": "L4_test_request", "legacy_ids": [],
+      "conditions": {"faults_all": [{"fault_id": "FLT-01", "min_status": "possible"}, {"fault_id": "FLT-03", "min_status": "possible"}]},
+      "conclusion": {"type": "request_tests", "targets": ["TST-01", "TST-07", "TST-08"], "likelihood": "not_applicable"},
+      "support_level": "Definitional", "validation_status": "not_applicable",
+      "relationship_ids": ["CF-01", "CF-05", "CF-04"], "source_ids": ["P-05"], "assumptions": [],
+      "explanation": "Cavitation and air ingress compete: check NPSH margin, suction leaks and liquid level."
+    },
+    {
+      "rule_id": "R-T-02", "layer": "L4_test_request", "legacy_ids": ["R03"],
+      "conditions": {"faults_all": [{"fault_id": "FLT-04", "min_status": "possible"}, {"fault_id": "FLT-05", "min_status": "possible"}]},
+      "conclusion": {"type": "request_tests", "targets": ["TST-02", "TST-03"], "likelihood": "not_applicable"},
+      "support_level": "Definitional", "validation_status": "not_applicable",
+      "relationship_ids": ["CF-17", "CF-08"], "source_ids": ["P-05"], "assumptions": [],
+      "explanation": "Bearing failure and misalignment compete: check alignment and analyse vibration."
+    },
+    {
+      "rule_id": "R-T-03", "layer": "L4_test_request", "legacy_ids": [],
+      "conditions": {"faults_count": {"fault_ids": ["FLT-07", "FLT-08", "FLT-10"], "min": 2, "min_status": "possible"}},
+      "conclusion": {"type": "request_tests", "targets": ["TST-09", "TST-11"], "likelihood": "not_applicable"},
+      "support_level": "Definitional", "validation_status": "not_applicable",
+      "relationship_ids": ["CF-13", "CF-18", "CF-19"], "source_ids": ["P-05"], "assumptions": [],
+      "explanation": "Impeller damage, blockage and wear-ring wear compete: run a performance test and inspect internally."
+    }
+  ]
+}

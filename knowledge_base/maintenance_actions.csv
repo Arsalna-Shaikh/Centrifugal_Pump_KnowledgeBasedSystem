@@ -1,0 +1,18 @@
+action_id,name,purpose,competence,opens_pump,cost_class,downtime_class,cost_downtime_support_level,cost_downtime_validation_status,cost_downtime_source_ids,cost_downtime_source_locator,legacy_ids,description
+ACT-01,Restore NPSH,correct,maintenance,no,LOW,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:4 (A03),A03,"Raise suction level or pressure, reduce suction losses, cool the liquid; do not throttle below Qmin"
+ACT-02,Inspect and repair or replace impeller,correct,maintenance,yes,MEDIUM-HIGH,MEDIUM-HIGH,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:5 (A04); data/maintenance_actions.csv:13 (A12),A04;A12,Inspect for erosion/corrosion damage
+ACT-03,Stop pump and restore liquid supply; prime and vent,make_safe,operator,no,LOW,HIGH,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:10 (A09),A09,
+ACT-04,Leak-test and repair suction piping and flanges,correct,maintenance,no,LOW,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:15 (A14),A14,
+ACT-05,Increase submergence or fit vortex breaker,correct,maintenance,no,UNKNOWN,UNKNOWN,Unvalidated,unvalidated,P-05,Step 1 (no legacy or researched source gives a value),,
+ACT-06,Gas separation and venting on suction,correct,maintenance,no,UNKNOWN,UNKNOWN,Unvalidated,unvalidated,P-05,Step 1 (no legacy or researched source gives a value),,
+ACT-07,Check bearing condition; lubricate correctly; replace if damaged,correct,maintenance,yes,LOW-MEDIUM,LOW-MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:2 (A01); data/maintenance_actions.csv:3 (A02),A01;A02,"Noise, temperature, vibration/oil analysis; avoid over-greasing"
+ACT-08,Check and correct alignment; correct pipe supports and strain,correct,maintenance,no,MEDIUM,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:6 (A05),A05,Dial indicator or laser
+ACT-09,Measure seal leakage; inspect or replace seal,correct,maintenance,yes,MEDIUM,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:8 (A07),A07,Keep faces clean and lubricated
+ACT-10,Dismantle and clean impeller and passages,correct,maintenance,yes,LOW,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:7 (A06),A06,
+ACT-11,Clean suction strainer; check suction valves fully open,correct,maintenance,no,LOW,LOW,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:9 (A08),A08,
+ACT-12,Open or repair discharge valve; restore flow at or above Qmin,correct,operator,no,LOW,LOW,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:14 (A13),A13,
+ACT-13,Reset or replace wear rings to manufacturer clearance,correct,maintenance,yes,UNKNOWN,UNKNOWN,Unvalidated,unvalidated,P-05,Step 1 (no legacy or researched source gives a value),,
+ACT-14,"Check supply voltage, frequency, phases, motor load and ventilation; insulation test",investigate,electrical,no,LOW-MEDIUM,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:11 (A10); data/maintenance_actions.csv:17 (A16),A10;A16,
+ACT-15,Inspect and repair coupling elements,correct,maintenance,no,MEDIUM,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:12 (A11),A11,
+ACT-16,"Inspect hold-down bolts, soft foot and foundation",investigate,maintenance,no,MEDIUM,MEDIUM,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:16 (A15),A15,
+ACT-17,Further investigation: carry out requested diagnostic tests,investigate,engineer,no,UNKNOWN,UNKNOWN,Unvalidated,unvalidated,P-05,Step 1 (no legacy or researched source gives a value),,Used with outcome OUT-U

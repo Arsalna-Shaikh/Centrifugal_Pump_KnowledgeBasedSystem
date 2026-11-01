@@ -1,0 +1,27 @@
+threshold_id,symptom_id,indicator_id,basis,operator,value,value_parameter_id,unit,default_for_basis,support_level,validation_status,source_ids,source_locator,replace_with,notes
+THR-01,SYM-01,IND-01,absolute,>=,6.0,,mm/s RMS,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:28,ISO 10816-7 Annex A zone boundary (S-14),Legacy prototype default
+THR-02,SYM-01,IND-01,absolute,>,4.5,,mm/s RMS,no,Unvalidated,unvalidated,P-04,data_preparation/scripts/preprocess_dataset.py:29,ISO 10816-7 Annex A zone boundary (S-14),"Labelled 'ISO 10816-3-style' in data preparation, but not verified (KA-2 section 13)"
+THR-03,SYM-01,IND-01,pct_baseline,>,,,% of baseline,yes,Unvalidated,unvalidated,S-14,S-14 scope (change-in-magnitude criterion),ISO 10816-7 change criterion,Value not available - ISO 10816-7 text not read
+THR-04,SYM-02,IND-02,absolute,>=,80,,degC,yes,Unvalidated,unvalidated,P-02;P-04,src/inference_engine.py:29; preprocess_dataset.py:32,OEM bearing data,
+THR-05,SYM-03,IND-03,absolute,>=,85,,degC,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:37,OEM seal data,
+THR-06,SYM-03,IND-03,absolute,>=,80,,degC,no,Unvalidated,unvalidated,P-04,preprocess_dataset.py:34,OEM seal data,Alternative candidate value
+THR-07,SYM-04,IND-04,absolute,>=,80,,degC,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:30,Motor insulation class / OEM data,
+THR-08,SYM-04,IND-04,absolute,>=,95,,degC,no,Unvalidated,unvalidated,P-04,preprocess_dataset.py:36,Motor insulation class / OEM data,Alternative candidate value
+THR-09,SYM-05,IND-05,pct_baseline,<,75,,% of baseline,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:31; src/app.py:25,Pump POR (ANSI/HI 9.6.3),Legacy app used % of healthy baseline
+THR-10,SYM-05,IND-05,pct_rated,<,75,,% of rated,yes,Unvalidated,unvalidated,P-04,preprocess_dataset.py:38,Pump POR (ANSI/HI 9.6.3),
+THR-11,SYM-06,IND-05,pct_baseline,<,10,,% of baseline,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:32,Pump Qmin (data sheet),
+THR-12,SYM-06,IND-05,pct_rated,<,10,,% of rated,yes,Unvalidated,unvalidated,P-04,preprocess_dataset.py:40,Pump Qmin (data sheet),
+THR-13,SYM-07,IND-06,pct_rated,<,85,,% of rated,yes,Unvalidated,unvalidated,P-04,preprocess_dataset.py:41,Pump curve tolerance / OEM data,
+THR-14,SYM-07,IND-06,pct_baseline,<,,,% of baseline,yes,Unvalidated,unvalidated,P-05,KR-1 correction 3,Pump curve tolerance / OEM data,Value not available
+THR-15,SYM-07,IND-12,absolute,<,4.2,,bar,no,Unvalidated,unvalidated,P-02,src/inference_engine.py:33,Pump-specific value,Legacy absolute value; only meaningful for the original prototype pump size
+THR-16,SYM-08,IND-06,pct_rated,>,115,,% of rated,yes,Unvalidated,unvalidated,P-04,preprocess_dataset.py:43,Pump curve (shut-off head),
+THR-17,SYM-08,IND-12,absolute,>,6.0,,bar,no,Unvalidated,unvalidated,P-02,src/inference_engine.py:34,Pump-specific value,Legacy absolute value
+THR-18,SYM-09,IND-07,absolute,<,0.70,,bar(a),yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:35,NPSHA vs NPSH3 plus margin (S-15),
+THR-19,SYM-09,IND-07,absolute,<,0.8,,bar(a),no,Unvalidated,unvalidated,P-04,preprocess_dataset.py:45,NPSHA vs NPSH3 plus margin (S-15),Alternative candidate value
+THR-20,SYM-10,IND-08,pct_rated,>,110,,% of rated,yes,Unvalidated,unvalidated,P-04,preprocess_dataset.py:47,Motor nameplate / service factor,
+THR-21,SYM-10,IND-08,absolute,>,38,,A,no,Unvalidated,unvalidated,P-02,src/inference_engine.py:36,Motor nameplate,Legacy absolute value (size-specific)
+THR-22,SYM-10,IND-08,pct_baseline,>,,,% of baseline,yes,Unvalidated,unvalidated,P-05,KR-1 correction 3,Motor nameplate / service factor,Value not available
+THR-23,SYM-11,IND-08,pct_rated,<,,,% of rated,yes,Unvalidated,unvalidated,P-05,KA-3 section 3.7,Pump power curve at Qmin,Value not available
+THR-24,SYM-12,IND-09,absolute,>=,10,,% of mean,yes,Unvalidated,unvalidated,P-02;P-04,src/inference_engine.py:38; preprocess_dataset.py:48,No source identified,
+THR-25,SYM-22,IND-10,absolute,>=,,,% of mean,yes,Unvalidated,unvalidated,P-02,src/inference_engine.py:38-39,No source identified,Legacy engine set flow_fluctuation whenever pressure fluctuation >= 10%; now an independent indicator with no value
+THR-26,SYM-23,IND-11,absolute,>,,PAR-12,degC,yes,Definitional,not_applicable,S-01,S-01 p.20,,Compares liquid temperature with the design temperature parameter

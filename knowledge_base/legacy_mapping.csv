@@ -1,0 +1,90 @@
+legacy_id,legacy_type,legacy_location,new_ids,mapping,notes
+C01,component,data/components.csv:2,CMP-01,kept,Volute added to scope
+C02,component,data/components.csv:3,CMP-02,kept,
+C03,component,data/components.csv:4,CMP-04,renumbered,
+C04,component,data/components.csv:5,CMP-05,renumbered,Lubricant added to scope
+C05,component,data/components.csv:6,CMP-06,renumbered,Packing added to scope
+C06,component,data/components.csv:7,CMP-07,renumbered,
+C07,component,data/components.csv:8,CMP-10,renumbered,
+C08,component,data/components.csv:9,CMP-11,renumbered,Check valve added to scope
+C09,component,data/components.csv:10,CMP-08,renumbered,
+C10,component,data/components.csv:11,CMP-09,renumbered,
+S01,symptom,data/symptoms.csv:2,SYM-01,kept,
+S02,symptom,data/symptoms.csv:3,SYM-02,kept,
+S03,symptom,data/symptoms.csv:4,SYM-14,renumbered,
+S04,symptom,data/symptoms.csv:5,SYM-13,renumbered,
+S05,symptom,data/symptoms.csv:6,SYM-07,redefined,discharge_pressure_low (absolute) -> head_low (rated/baseline relative)
+S06,symptom,data/symptoms.csv:7,SYM-05,redefined,Supports rated and baseline bases
+S07,symptom,data/symptoms.csv:8,SYM-09,renumbered,
+S08,symptom,data/symptoms.csv:9,SYM-15,renumbered,
+S09,symptom,data/symptoms.csv:10,SYM-10,redefined,Absolute 38 A kept as non-default legacy threshold THR-21
+S10,symptom,data/symptoms.csv:11,SYM-04,renumbered,
+S11,symptom,data/symptoms.csv:12,SYM-12,renumbered,
+S12,symptom,data/symptoms.csv:13,SYM-22,kept_separate,KR-1 correction 1: not merged with pressure_fluctuation
+S13,symptom,data/symptoms.csv:14,SYM-06,renumbered,
+S14,symptom,data/symptoms.csv:15,SYM-18,renumbered,
+S15,symptom,data/symptoms.csv:16,SYM-16,renumbered,
+S16,symptom,data/symptoms.csv:17,SYM-03,renumbered,
+S17,symptom,data/symptoms.csv:18,SYM-08,redefined,discharge_pressure_high (absolute) -> head_high
+S18,symptom,data/symptoms.csv:19,SYM-20,renumbered,
+S19,symptom,data/symptoms.csv:20,,retired,base_vibration retired (KA-3 D4); legacy link weights:65 not carried over
+S20,symptom,data/symptoms.csv:21,SYM-17,renumbered,
+S21,symptom,data/symptoms.csv:22,SYM-21,replaced,efficiency_low -> performance_decline
+S22,symptom,data/symptoms.csv:23,SYM-19,renumbered,
+F01,fault,data/faults.csv:2,FLT-04,renumbered,
+F02,fault,data/faults.csv:3,FLT-01,renumbered,
+F03,fault,data/faults.csv:4,FLT-05,renumbered,
+F04,fault,data/faults.csv:5,FLT-08,renumbered,
+F05,fault,data/faults.csv:6,FLT-06,renumbered,
+F06,fault,data/faults.csv:7,CAU-05,converted_to_cause,Suction blockage / clogged strainer is a cause of cavitation (S-01 p.20)
+F07,fault,data/faults.csv:8,FLT-02,renumbered,
+F08,fault,data/faults.csv:9,FLT-11,merged,Merged with F14 into Motor fault
+F09,fault,data/faults.csv:10,FLT-12;CAU-38,renumbered,Coupling damage kept as fault; its description becomes cause CAU-38
+F10,fault,data/faults.csv:11,FLT-07,renumbered,
+F11,fault,data/faults.csv:12,FLT-09;CAU-32,renumbered,'Closed valve' part of the name becomes cause CAU-32
+F12,fault,data/faults.csv:13,FLT-03,renumbered,
+F13,fault,data/faults.csv:14,CAU-21,converted_to_cause,Base looseness / soft foot becomes a cause of misalignment
+F14,fault,data/faults.csv:15,FLT-11;CAU-39,merged,Merged into Motor fault; electrical supply imbalance retained as distinct cause CAU-39 (KR-1 correction 2)
+A01,action,data/maintenance_actions.csv:2,ACT-07,merged,
+A02,action,data/maintenance_actions.csv:3,ACT-07,merged,
+A03,action,data/maintenance_actions.csv:4,ACT-01,renumbered,
+A04,action,data/maintenance_actions.csv:5,ACT-02,merged,
+A05,action,data/maintenance_actions.csv:6,ACT-08,renumbered,
+A06,action,data/maintenance_actions.csv:7,ACT-10;SAF-03,renumbered,Isolation statement became safety rule SAF-03
+A07,action,data/maintenance_actions.csv:8,ACT-09,renumbered,
+A08,action,data/maintenance_actions.csv:9,ACT-11,renumbered,
+A09,action,data/maintenance_actions.csv:10,ACT-03;SAF-01,renumbered,'Do not continue dry operation' became safety rule SAF-01
+A10,action,data/maintenance_actions.csv:11,ACT-14,merged,
+A11,action,data/maintenance_actions.csv:12,ACT-15,renumbered,
+A12,action,data/maintenance_actions.csv:13,ACT-02;SAF-03,merged,
+A13,action,data/maintenance_actions.csv:14,ACT-12;SAF-02,renumbered,
+A14,action,data/maintenance_actions.csv:15,ACT-04,renumbered,
+A15,action,data/maintenance_actions.csv:16,ACT-16,renumbered,
+A16,action,data/maintenance_actions.csv:17,ACT-14;SAF-04,merged,
+R01,rule,data/rules.json:3,R-BRG-1;R-BRG-2,split,
+R02,rule,data/rules.json:14,R-CAV-1,rewritten,pressure_fluctuation no longer required (unvalidated)
+R03,rule,data/rules.json:25,R-MIS-2;R-T-02,kept_unvalidated,KA-1 conflict C-05
+R04,rule,data/rules.json:36,R-BLK-1,rewritten,efficiency_low removed
+R05,rule,data/rules.json:47,R-SEAL-1;R-SEAL-2,split,
+R06,rule,data/rules.json:57,R-C-02,converted_to_cause_rule,F06 is now a cause
+R07,rule,data/rules.json:68,R-DRY-1;R-DRY-2,split,rapid_temp_rise no longer required
+R08,rule,data/rules.json:79,R-MOT-1,kept,
+R09,rule,data/rules.json:89,R-CPL-1,kept_unvalidated,
+R10,rule,data/rules.json:99,R-IMP-1,rewritten,
+R11,rule,data/rules.json:111,R-DIS-1,rewritten,head_high condition dropped (unvalidated)
+R12,rule,data/rules.json:122,R-AIR-1;R-AIR-2,split,R-AIR-2 preserves the legacy pattern incl. flow_fluctuation
+R13,rule,data/rules.json:133,,retired,F13 converted to cause; base_vibration retired
+R14,rule,data/rules.json:143,R-C-09;R-C-10,converted_to_cause_rule,F14 is now cause CAU-39
+TH-ENG-28,threshold,src/inference_engine.py:28,THR-01,kept_unvalidated,
+TH-ENG-29,threshold,src/inference_engine.py:29,THR-04,kept_unvalidated,
+TH-ENG-30,threshold,src/inference_engine.py:30,THR-07,kept_unvalidated,
+TH-ENG-31,threshold,src/inference_engine.py:31,THR-09,kept_unvalidated,Baseline basis
+TH-ENG-32,threshold,src/inference_engine.py:32,THR-11,kept_unvalidated,Baseline basis
+TH-ENG-33,threshold,src/inference_engine.py:33,THR-15,kept_unvalidated,Non-default absolute value
+TH-ENG-34,threshold,src/inference_engine.py:34,THR-17,kept_unvalidated,Non-default absolute value
+TH-ENG-35,threshold,src/inference_engine.py:35,THR-18,kept_unvalidated,
+TH-ENG-36,threshold,src/inference_engine.py:36,THR-21,kept_unvalidated,Non-default absolute value
+TH-ENG-37,threshold,src/inference_engine.py:37,THR-05,kept_unvalidated,
+TH-ENG-38,threshold,src/inference_engine.py:38,THR-24,kept_unvalidated,
+TH-ENG-39,threshold,src/inference_engine.py:39,THR-25,separated,flow_fluctuation no longer co-derived from pressure fluctuation
+W-65,weight,data/symptom_fault_weights.csv:65,,retired,F13 -> base_vibration (symptom retired)
