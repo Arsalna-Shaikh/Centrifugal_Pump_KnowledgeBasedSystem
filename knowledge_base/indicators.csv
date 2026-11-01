@@ -1,0 +1,13 @@
+indicator_id,name,unit,supported_bases,rated_parameter_id,baseline_parameter_id,description
+IND-01,vibration_velocity,mm/s RMS,absolute;pct_baseline,,PAR-11,Overall vibration on bearing housing
+IND-02,bearing_temperature,degC,absolute,,,Bearing housing temperature
+IND-03,seal_area_temperature,degC,absolute,,,Temperature at the mechanical seal area
+IND-04,motor_temperature,degC,absolute,,,Motor frame/winding temperature
+IND-05,flow_rate,m3/h,absolute;pct_rated;pct_baseline,PAR-02,PAR-08,Delivered flow
+IND-06,differential_pressure,bar,absolute;pct_rated;pct_baseline,PAR-03,PAR-09,Discharge minus suction pressure (pump head)
+IND-07,suction_pressure,bar(a),absolute,,,Absolute pressure at pump suction
+IND-08,motor_current,A,absolute;pct_rated;pct_baseline,PAR-04,PAR-10,Motor line current
+IND-09,pressure_fluctuation,% of mean,absolute,,,Peak-to-peak discharge pressure variation
+IND-10,flow_fluctuation,% of mean,absolute,,,Peak-to-peak flow variation (kept separate from pressure fluctuation - KR-1 correction 1)
+IND-11,liquid_temperature,degC,absolute,,,Pumped liquid temperature
+IND-12,discharge_pressure,bar,absolute,,,Discharge pressure; legacy absolute indicator (size-specific)

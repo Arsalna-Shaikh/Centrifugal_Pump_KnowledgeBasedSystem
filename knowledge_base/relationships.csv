@@ -1,0 +1,283 @@
+rel_id,rel_type,from_id,to_id,qualifier,support_level,validation_status,source_ids,source_locator,legacy_ref,legacy_weight,notes
+HC-01,has_component,EQ-01,CMP-01,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-02,has_component,EQ-01,CMP-02,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-03,has_component,EQ-01,CMP-03,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-04,has_component,EQ-01,CMP-04,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-05,has_component,EQ-01,CMP-05,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-06,has_component,EQ-01,CMP-06,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-07,has_component,EQ-01,CMP-07,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-08,has_component,EQ-01,CMP-08,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-09,has_component,EQ-01,CMP-09,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-10,has_component,EQ-01,CMP-10,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-11,has_component,EQ-01,CMP-11,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-12,has_component,EQ-01,EXT-01,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-13,has_component,EQ-01,EXT-02,,Definitional,not_applicable,P-05,KA-3 D5,,,
+HC-14,has_component,EQ-01,EXT-03,,Definitional,not_applicable,P-05,KA-3 D5,,,
+MS-01,measured_on,IND-01,CMP-05,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-02,measured_on,IND-02,CMP-05,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-03,measured_on,IND-03,CMP-06,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-04,measured_on,IND-04,CMP-08,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-05,measured_on,IND-05,CMP-11,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-06,measured_on,IND-06,CMP-01,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-07,measured_on,IND-07,CMP-10,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-08,measured_on,IND-08,CMP-08,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-09,measured_on,IND-09,CMP-11,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-10,measured_on,IND-10,CMP-11,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-11,measured_on,IND-11,EXT-03,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+MS-12,measured_on,IND-12,CMP-11,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,
+SR-01,implies,SYM-06,SYM-05,,Definitional,not_applicable,P-02,src/inference_engine.py:31-32,,,No flow is a subset of low flow
+SR-02,excludes,SYM-07,SYM-08,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,Present together = data conflict
+SR-03,excludes,SYM-11,SYM-10,,Definitional,not_applicable,P-05,KA-3 section 3.3,,,Present together = data conflict
+FL-01,fault_located_in,FLT-01,CMP-02,role=damage,Strong,validated,S-01;S-04,S-01 p.20; S-04,data/faults.csv:3,,Cavitation erodes the impeller
+FL-02,fault_located_in,FLT-01,CMP-10,role=origin,Unvalidated,unvalidated,P-05,KA-1 inventory section 3,,,Origin in suction conditions (inferred)
+FL-03,fault_located_in,FLT-02,CMP-06,role=damage,Strong,validated,S-01,S-01 p.31,,,Seals and packing damaged if not lubricated
+FL-04,fault_located_in,FLT-02,CMP-03,role=damage,Strong,validated,S-01,S-01 p.31,,,Wear rings damaged if not lubricated
+FL-05,fault_located_in,FLT-02,CMP-01,role=origin,Unvalidated,unvalidated,P-01,data/faults.csv:8,data/faults.csv:8,,Legacy component assignment C01
+FL-06,fault_located_in,FLT-03,CMP-10,role=origin,Unvalidated,unvalidated,P-01,data/faults.csv:13,data/faults.csv:13,,Legacy component assignment C07
+FL-07,fault_located_in,FLT-04,CMP-05,role=damage,Definitional,not_applicable,P-01,data/faults.csv:2,data/faults.csv:2,,
+FL-08,fault_located_in,FLT-05,CMP-04,role=origin,Unvalidated,unvalidated,P-01,data/faults.csv:4,data/faults.csv:4,,Legacy component assignment C03
+FL-09,fault_located_in,FLT-05,CMP-07,role=origin,Unvalidated,unvalidated,P-05,KA-1 inventory section 3,,,
+FL-10,fault_located_in,FLT-06,CMP-06,role=damage,Definitional,not_applicable,P-01,data/faults.csv:6,data/faults.csv:6,,
+FL-11,fault_located_in,FLT-07,CMP-02,role=damage,Definitional,not_applicable,P-01,data/faults.csv:11,data/faults.csv:11,,
+FL-12,fault_located_in,FLT-08,CMP-02,role=damage,Definitional,not_applicable,P-01,data/faults.csv:5,data/faults.csv:5,,
+FL-13,fault_located_in,FLT-09,CMP-11,role=origin,Unvalidated,unvalidated,P-01,data/faults.csv:12,data/faults.csv:12,,Legacy component assignment C08
+FL-14,fault_located_in,FLT-10,CMP-03,role=damage,Definitional,not_applicable,P-05,KR-1,,,
+FL-15,fault_located_in,FLT-11,CMP-08,role=damage,Definitional,not_applicable,P-01,data/faults.csv:9; data/faults.csv:15,data/faults.csv:9;data/faults.csv:15,,
+FL-16,fault_located_in,FLT-12,CMP-07,role=damage,Definitional,not_applicable,P-01,data/faults.csv:10,data/faults.csv:10,,
+MA-01,manifests_as,FLT-04,SYM-01,,Strong,validated,S-01,S-01 pp.34 and 36,weights:2,5,
+MA-02,manifests_as,FLT-04,SYM-02,,Strong,validated,S-01,S-01 pp.34 and 36,weights:3,5,
+MA-03,manifests_as,FLT-04,SYM-14,,Strong,validated,S-01,S-01 p.34,weights:4,4,Bearing noise
+MA-04,manifests_as,FLT-04,SYM-10,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:5,weights:5,2,
+MA-05,manifests_as,FLT-04,SYM-21,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:6,weights:6,1,Legacy efficiency_low
+MA-06,manifests_as,FLT-01,SYM-13,,Strong,validated,S-01;S-04,S-01 p.20; S-04,weights:7,5,
+MA-07,manifests_as,FLT-01,SYM-01,,Strong,validated,S-01,S-01 p.21,weights:8,4,
+MA-08,manifests_as,FLT-01,SYM-07,,Strong,validated,S-01;S-02;S-04,S-01 p.20; S-02; S-04,weights:9,3,Legacy discharge_pressure_low
+MA-09,manifests_as,FLT-01,SYM-05,,Moderate,validated,S-11,S-11 item 13,weights:10,3,
+MA-10,manifests_as,FLT-01,SYM-09,,Strong,validated,S-01,S-01 p.20,weights:11,5,Low suction pressure is also a cause indicator (IB-14)
+MA-11,manifests_as,FLT-01,SYM-12,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:12,weights:12,4,No source read names pressure fluctuation for cavitation
+MA-12,manifests_as,FLT-01,SYM-22,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:13,weights:13,4,
+MA-13,manifests_as,FLT-01,SYM-21,,Strong,validated,S-01;S-04,S-01 p.20; S-04,weights:14,3,Legacy efficiency_low
+MA-14,manifests_as,FLT-05,SYM-01,,Moderate,validated,S-13,S-13,weights:15,5,
+MA-15,manifests_as,FLT-05,SYM-16,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:16,weights:16,5,
+MA-16,manifests_as,FLT-05,SYM-02,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:17,weights:17,3,KA-1 conflict C-05 still open
+MA-17,manifests_as,FLT-05,SYM-10,,Moderate,validated,S-11,S-11 item 38,weights:18,2,'Pump takes too much power'
+MA-18,manifests_as,FLT-05,SYM-14,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:19,weights:19,2,
+MA-19,manifests_as,FLT-08,SYM-05,,Moderate,validated,S-11,S-11 items 7 and 11,weights:20,5,
+MA-20,manifests_as,FLT-08,SYM-07,,Moderate,validated,S-11,S-11 item 21,weights:21,4,
+MA-21,manifests_as,FLT-08,SYM-21,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:22,weights:22,5,Legacy efficiency_low
+MA-22,manifests_as,FLT-08,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:23,weights:23,2,
+MA-23,manifests_as,FLT-08,SYM-10,pump_design=radial,Disputed,disputed,S-01;P-01,S-01 p.17; data/symptom_fault_weights.csv:24,weights:24,2,Radial pumps draw less current at low flow
+MA-24,manifests_as,FLT-08,SYM-06,,Moderate,validated,S-11,S-11 item 7,,,Impeller completely plugged
+MA-25,manifests_as,FLT-06,SYM-15,,Strong,validated,S-01,S-01 pp.34-35,weights:25,5,
+MA-26,manifests_as,FLT-06,SYM-03,,Moderate,validated,S-08,S-08,weights:26,4,Thermal overload of seal faces
+MA-27,manifests_as,FLT-06,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:27,weights:27,2,
+MA-28,manifests_as,FLT-06,SYM-02,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:28,weights:28,1,
+MA-29,manifests_as,FLT-02,SYM-06,,Moderate,validated,S-11,S-11 items 1-7,weights:34,5,
+MA-30,manifests_as,FLT-02,SYM-18,,Strong,validated,S-01;S-11,S-01 pp.22 and 31; S-11 item 1,weights:35,5,
+MA-31,manifests_as,FLT-02,SYM-19,,Moderate,validated,S-06,S-06,weights:36,5,Overheating
+MA-32,manifests_as,FLT-02,SYM-03,,Moderate,validated,S-06;S-08,S-06; S-08,weights:37,4,
+MA-33,manifests_as,FLT-02,SYM-02,,Moderate,validated,S-06,S-06,weights:38,3,
+MA-34,manifests_as,FLT-02,SYM-14,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:39,weights:39,2,
+MA-35,manifests_as,FLT-02,SYM-01,,Moderate,validated,S-06,S-06,,,New in KA-2
+MA-36,manifests_as,FLT-11,SYM-10,,Moderate,validated,S-11,S-11 items 33 and 40,weights:40,5,Legacy F08 link
+MA-37,manifests_as,FLT-11,SYM-04,,Moderate,validated,S-11,S-11 item 40,weights:41,5,Legacy F08 link
+MA-38,manifests_as,FLT-11,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:42,weights:42,2,
+MA-39,manifests_as,FLT-11,SYM-20,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:43,weights:43,2,
+MA-40,manifests_as,FLT-11,SYM-05,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:44,weights:44,1,
+MA-41,manifests_as,FLT-12,SYM-16,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:45,weights:45,5,
+MA-42,manifests_as,FLT-12,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:46,weights:46,4,
+MA-43,manifests_as,FLT-12,SYM-14,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:47,weights:47,3,
+MA-44,manifests_as,FLT-12,SYM-02,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:48,weights:48,2,
+MA-45,manifests_as,FLT-07,SYM-01,,Strong,validated,S-01,S-01 p.21,weights:49,4,Via impeller unbalance
+MA-46,manifests_as,FLT-07,SYM-05,,Moderate,validated,S-11,S-11 item 14,weights:50,4,
+MA-47,manifests_as,FLT-07,SYM-07,,Strong,validated,S-01,S-01 p.35,weights:51,4,Reduced pump performance
+MA-48,manifests_as,FLT-07,SYM-21,,Strong,validated,S-01,S-01 p.35,weights:52,5,Legacy efficiency_low
+MA-49,manifests_as,FLT-07,SYM-14,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:53,weights:53,2,
+MA-50,manifests_as,FLT-09,SYM-08,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:54,weights:54,5,Follows from the pump curve but not stated as a symptom by a source read
+MA-51,manifests_as,FLT-09,SYM-05,,Strong,validated,S-02;S-07,S-02; S-07,weights:55,5,
+MA-52,manifests_as,FLT-09,SYM-19,,Strong,validated,S-02;S-07,S-02; S-07,weights:56,4,Rapid temperature increase at shut-off
+MA-53,manifests_as,FLT-09,SYM-10,pump_design=radial,Disputed,disputed,S-01;P-01,S-01 p.17; data/symptom_fault_weights.csv:57,weights:57,2,Radial pumps draw least current at shut-off
+MA-54,manifests_as,FLT-09,SYM-21,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:58,weights:58,2,Legacy efficiency_low
+MA-55,manifests_as,FLT-09,SYM-01,,Strong,validated,S-02,S-02,,,Flow-induced vibration outside POR
+MA-56,manifests_as,FLT-09,SYM-11,pump_design=radial,Strong,validated,S-01,S-01 p.17,,,
+MA-57,manifests_as,FLT-03,SYM-17,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:59,weights:59,5,
+MA-58,manifests_as,FLT-03,SYM-18,,Strong,validated,S-01,S-01 pp.22 and 31,weights:60,3,
+MA-59,manifests_as,FLT-03,SYM-22,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:61,weights:61,4,
+MA-60,manifests_as,FLT-03,SYM-12,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:62,weights:62,4,S-01 p.31 mentions pulsations from vapour pockets only
+MA-61,manifests_as,FLT-03,SYM-07,,Strong,validated,S-03;S-11,S-03; S-11 item 22,weights:63,3,
+MA-62,manifests_as,FLT-03,SYM-05,,Strong,validated,S-03;S-11,S-03; S-11 item 8,weights:64,3,
+MA-63,manifests_as,FLT-10,SYM-21,,Strong,validated,S-01,S-01 p.35,,,
+MA-64,manifests_as,FLT-10,SYM-07,,Strong,validated,S-01,S-01 p.16,,,Internal leakage
+MA-65,manifests_as,FLT-10,SYM-05,,Strong,validated,S-01,S-01 p.16,,,Internal leakage
+MA-66,manifests_as,FLT-09,SYM-10,pump_design=axial,Strong,validated,S-01,S-01 p.17,,,Axial pumps: power highest toward shut-off
+IB-01,indicated_by,CAU-05,SYM-09,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:29,weights:29,5,Legacy F06 link
+IB-02,indicated_by,CAU-05,SYM-05,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:30,weights:30,5,Legacy F06 link
+IB-03,indicated_by,CAU-05,SYM-07,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:31,weights:31,4,Legacy F06 link
+IB-04,indicated_by,CAU-05,SYM-13,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:32,weights:32,2,Legacy F06 link
+IB-05,indicated_by,CAU-05,SYM-21,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:33,weights:33,3,Legacy F06 link (efficiency_low)
+IB-06,indicated_by,CAU-21,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:66,weights:66,4,Legacy F13 link
+IB-07,indicated_by,CAU-21,SYM-16,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:67,weights:67,2,Legacy F13 link
+IB-08,indicated_by,CAU-21,SYM-14,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:68,weights:68,1,Legacy F13 link
+IB-09,indicated_by,CAU-39,SYM-04,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:69,weights:69,5,Legacy F14 link
+IB-10,indicated_by,CAU-39,SYM-10,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:70,weights:70,4,Legacy F14 link
+IB-11,indicated_by,CAU-39,SYM-20,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:71,weights:71,4,Legacy F14 link
+IB-12,indicated_by,CAU-39,SYM-01,,Unvalidated,unvalidated,P-01,data/symptom_fault_weights.csv:72,weights:72,2,Legacy F14 link
+IB-13,indicated_by,CAU-02,SYM-23,,Definitional,not_applicable,S-01,S-01 p.20,,,
+IB-14,indicated_by,CAU-01,SYM-09,,Strong,validated,S-01,S-01 p.20,,,Lower-than-design suction pressure
+AA-01,argues_against,SYM-10,FLT-08,pump_design=radial,Strong,validated,S-01,S-01 p.17,,,
+AA-02,argues_against,SYM-10,FLT-09,pump_design=radial,Strong,validated,S-01,S-01 p.17,,,
+AA-03,argues_against,SYM-08,FLT-01,,Strong,validated,S-01,S-01 p.20,,,Cavitation lowers the generated head
+AA-04,argues_against,SYM-08,FLT-07,,Strong,validated,S-01,S-01 p.35,,,Impeller damage reduces performance
+AA-05,argues_against,SYM-08,FLT-08,,Moderate,validated,S-11,S-11 item 21,,,Obstruction gives not enough pressure
+AA-06,argues_against,SYM-08,FLT-10,,Strong,validated,S-01,S-01 p.16,,,Wear-ring wear increases internal leakage
+CB-01,caused_by,FLT-01,CAU-01,,Strong,validated,S-01;S-02;S-11,S-01 p.20; S-02; S-11 items 3 and 13,,,
+CB-02,caused_by,FLT-01,CAU-02,,Strong,validated,S-01,S-01 p.20,,,
+CB-03,caused_by,FLT-01,CAU-03,,Strong,validated,S-01,S-01 p.20,,,
+CB-04,caused_by,FLT-01,CAU-04,,Strong,validated,S-01;S-07,S-01 pp.20-21; S-07,,,Low-flow cavitation / internal recirculation
+CB-05,caused_by,FLT-04,CAU-04,,Strong,validated,S-01,S-01 pp.22 and 25,,,
+CB-06,caused_by,FLT-09,CAU-04,,Strong,validated,S-01;S-02,S-01 p.25; S-02,,,Throttled or oversized pump
+CB-07,caused_by,FLT-01,CAU-05,,Strong,validated,S-01,S-01 p.20,,,Suction starved by fouling of pipes
+CB-09,caused_by,FLT-01,CAU-06,,Strong,validated,S-01,S-01 p.20,,,
+CB-10,caused_by,FLT-02,CAU-07,,Moderate,validated,S-06;S-08;S-11,S-06; S-08; S-11 items 1 and 25,,,
+CB-11,caused_by,FLT-02,CAU-08,,Strong,validated,S-01,S-01 p.31,,,Vortex -> loss of prime
+CB-12,caused_by,FLT-03,CAU-08,,Strong,validated,S-01;S-11,S-01 p.31; S-11 item 16,,,
+CB-13,caused_by,FLT-03,CAU-09,,Moderate,validated,S-11,S-11 items 8 19 27,,,
+CB-14,caused_by,FLT-03,CAU-10,,Strong,validated,S-01,S-01 p.22,,,
+CB-15,caused_by,FLT-02,CAU-10,,Strong,validated,S-01,S-01 p.22,,,Pumps cannot stay primed
+CB-16,caused_by,FLT-03,CAU-11,,Strong,validated,S-01;S-03;S-11,S-01 p.31; S-03; S-11 item 22,,,
+CB-17,caused_by,FLT-04,CAU-12,,Strong,validated,S-01;S-12,S-01 p.16; S-12 p.4,,,
+CB-18,caused_by,FLT-04,CAU-13,,Strong,validated,S-01,S-01 p.33,,,
+CB-19,caused_by,FLT-04,CAU-14,,Strong,validated,S-01,S-01 pp.21-22 and 25,,,
+CB-20,caused_by,FLT-04,CAU-15,,Moderate,validated,S-12,S-12 pp.4-5,,,
+CB-21,caused_by,FLT-04,CAU-16,,Moderate,validated,S-12,S-12 pp.2 and 5-6,,,
+CB-22,caused_by,FLT-04,CAU-17,,Moderate,validated,S-12,S-12 pp.2-4,,,
+CB-23,caused_by,FLT-04,CAU-18,,Moderate,validated,S-12,S-12 p.5,,,
+CB-24,caused_by,FLT-05,CAU-19,,Strong,validated,S-01;S-11,S-01 p.32; S-11 item 35,,,
+CB-25,caused_by,FLT-05,CAU-20,,Strong,validated,S-01,S-01 p.34,,,
+CB-26,caused_by,FLT-05,CAU-21,,Unvalidated,unvalidated,P-01,data/faults.csv:14; data/maintenance_actions.csv:6,data/faults.csv:14,,Legacy F13 base looseness / soft foot
+CB-27,caused_by,FLT-05,CAU-22,,Unvalidated,unvalidated,P-03,data_preparation/scripts/generate_dataset.py:42-59,,,Dataset only
+CB-28,caused_by,FLT-06,CAU-23,,Strong,validated,S-01,S-01 pp.16 and 22,,,
+CB-29,caused_by,FLT-06,CAU-24,,Strong,validated,S-01;S-08,S-01 p.16; S-08,,,
+CB-30,caused_by,FLT-06,CAU-25,,Strong,validated,S-01,S-01 pp.16 and 22,,,
+CB-31,caused_by,FLT-06,CAU-26,,Strong,validated,S-01,S-01 p.22,,,
+CB-32,caused_by,FLT-06,CAU-27,,Moderate,validated,S-08,S-08,,,Wear caused by abrasive fluids
+CB-33,caused_by,FLT-07,CAU-27,,Strong,validated,S-01,S-01 p.7,,,
+CB-34,caused_by,FLT-06,CAU-28,,Unvalidated,unvalidated,P-01;P-03,data/maintenance_actions.csv:8,,,
+CB-35,caused_by,FLT-07,CAU-29,,Moderate,validated,S-04,S-04,,,
+CB-36,caused_by,FLT-07,CAU-30,,Unvalidated,unvalidated,P-03,data_preparation/scripts/generate_dataset.py:42-59,,,Dataset only
+CB-37,caused_by,FLT-08,CAU-31,,Moderate,validated,S-11,S-11 items 7 11 21,,,
+CB-38,caused_by,FLT-09,CAU-32,,Moderate,validated,S-07,S-07,data/faults.csv:12,,Closed shut-off element; legacy F11 name
+CB-39,caused_by,FLT-10,CAU-33,,Strong,validated,S-01,S-01 p.16,,,
+CB-40,caused_by,FLT-11,CAU-34,,Moderate,validated,S-11,S-11 item 33,,,
+CB-41,caused_by,FLT-11,CAU-35,,Moderate,validated,S-11,S-11 items 5 and 40,,,
+CB-42,caused_by,FLT-11,CAU-36,,Strong,validated,S-01,S-01 p.35,,,
+CB-43,caused_by,FLT-11,CAU-37,,Moderate,validated,S-11,S-11 item 40,,,
+CB-44,caused_by,FLT-12,CAU-38,,Unvalidated,unvalidated,P-01,data/faults.csv:10,data/faults.csv:10,,
+CB-45,caused_by,FLT-11,CAU-39,,Unvalidated,unvalidated,P-01,data/faults.csv:15; data/maintenance_actions.csv:17,data/faults.csv:15,,Legacy F14 retained as distinct cause
+CL-01,cause_located_at,CAU-01,CMP-10,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,Inferred from cause wording
+CL-02,cause_located_at,CAU-02,EXT-03,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-03,cause_located_at,CAU-03,EQ-01,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,Operating point of the pump set
+CL-04,cause_located_at,CAU-04,EQ-01,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,Operating point of the pump set
+CL-05,cause_located_at,CAU-05,CMP-10,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,data/faults.csv:7,,Legacy F06 component C07
+CL-06,cause_located_at,CAU-06,EQ-01,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-07,cause_located_at,CAU-07,EXT-01,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-08,cause_located_at,CAU-08,EXT-01,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-09,cause_located_at,CAU-09,CMP-10,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-10,cause_located_at,CAU-10,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-11,cause_located_at,CAU-11,EXT-03,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-12,cause_located_at,CAU-12,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-13,cause_located_at,CAU-13,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-14,cause_located_at,CAU-14,CMP-04,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-15,cause_located_at,CAU-15,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-16,cause_located_at,CAU-16,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-17,cause_located_at,CAU-17,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-18,cause_located_at,CAU-18,CMP-05,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-19,cause_located_at,CAU-19,CMP-10,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,Suction/discharge piping
+CL-20,cause_located_at,CAU-20,CMP-09,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-21,cause_located_at,CAU-21,CMP-09,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,data/faults.csv:14,,Legacy F13 component C10
+CL-22,cause_located_at,CAU-22,CMP-07,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-23,cause_located_at,CAU-23,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-24,cause_located_at,CAU-24,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-25,cause_located_at,CAU-25,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-26,cause_located_at,CAU-26,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-27,cause_located_at,CAU-27,EXT-03,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-28,cause_located_at,CAU-28,CMP-06,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-29,cause_located_at,CAU-29,CMP-02,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-30,cause_located_at,CAU-30,CMP-02,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-31,cause_located_at,CAU-31,CMP-02,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-32,cause_located_at,CAU-32,CMP-11,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-33,cause_located_at,CAU-33,CMP-03,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-34,cause_located_at,CAU-34,EXT-03,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-35,cause_located_at,CAU-35,EXT-02,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-36,cause_located_at,CAU-36,CMP-08,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-37,cause_located_at,CAU-37,CMP-08,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,,,
+CL-38,cause_located_at,CAU-38,CMP-07,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,data/faults.csv:10,,
+CL-39,cause_located_at,CAU-39,EXT-02,,Unvalidated,unvalidated,P-05,KA-1 mapping section 5.3,data/faults.csv:15,,Legacy F14 component C09
+LT-01,leads_to,FLT-01,FLT-07,,Strong,validated,S-01;S-04,S-01 pp.20 and 35; S-04,,,Cavitation erosion of the impeller
+LT-02,leads_to,FLT-01,FLT-04,,Strong,validated,S-01,S-01 pp.20-21,,,Accelerated bearing wear / unbalance
+LT-03,leads_to,FLT-01,FLT-06,,Strong,validated,S-01,S-01 p.20,,,Accelerated seal wear
+LT-04,leads_to,FLT-03,FLT-02,,Strong,validated,S-01;S-06,S-01 p.31; S-06,,,Loss of prime / partial dry running
+LT-05,leads_to,FLT-02,FLT-06,,Strong,validated,S-01;S-08,S-01 p.31; S-08,,,
+LT-06,leads_to,FLT-09,FLT-01,,Strong,validated,S-01;S-07,S-01 pp.20-21; S-07,,,Recirculation at low flow
+LT-07,leads_to,FLT-09,FLT-04,,Strong,validated,S-01,S-01 pp.22 and 25,,,
+LT-08,leads_to,FLT-07,FLT-04,,Strong,validated,S-01,S-01 p.21,,,Unbalance -> alternating bearing loads
+LT-09,leads_to,FLT-05,FLT-04,,Moderate,validated,S-13;S-12,S-13; S-12 p.6,,,Via vibration
+LT-10,leads_to,FLT-05,FLT-06,,Moderate,validated,S-13,S-13,,,Via vibration
+CF-01,confirmed_by,CAU-01,TST-01,result=NPSHA_below_NPSH3_plus_margin,Strong,validated,S-02,S-02,,,
+CF-02,confirmed_by,CAU-02,TST-01,result=NPSHA_below_NPSH3_plus_margin,Strong,validated,S-02;S-01,S-02; S-01 p.20,,,
+CF-03,confirmed_by,CAU-05,TST-11,result=strainer_clogged,Moderate,validated,S-11,S-11 item 15,,,
+CF-04,confirmed_by,CAU-08,TST-08,result=low_level_or_vortex,Strong,validated,S-01,S-01 p.31,,,
+CF-05,confirmed_by,CAU-09,TST-07,result=leak_found,Moderate,validated,S-11,S-11 item 8,,,
+CF-06,confirmed_by,CAU-12,TST-04,result=lubricant_degraded,Strong,validated,S-01,S-01 p.36,,,
+CF-07,confirmed_by,CAU-15,TST-04,result=contamination_found,Moderate,validated,S-12,S-12 p.4,,,
+CF-08,confirmed_by,CAU-14,TST-03,result=abnormal_vs_baseline,Strong,validated,S-01,S-01 p.36,,,
+CF-09,confirmed_by,CAU-17,TST-03,result=abnormal_vs_baseline,Strong,validated,S-01,S-01 p.36,,,
+CF-10,confirmed_by,CAU-19,TST-02,result=out_of_tolerance,Strong,validated,S-01,S-01 p.34,,,
+CF-11,confirmed_by,CAU-20,TST-02,result=out_of_tolerance,Strong,validated,S-01,S-01 p.34,,,
+CF-12,confirmed_by,FLT-06,TST-06,result=leakage_above_spec,Strong,validated,S-01,S-01 p.34,,,
+CF-13,confirmed_by,CAU-33,TST-09,result=below_curve,Strong,validated,S-01,S-01 p.35,,,
+CF-14,confirmed_by,CAU-33,TST-11,result=wear_ring_clearance_excessive,Strong,validated,S-01,S-01 p.35,,,
+CF-15,confirmed_by,CAU-35,TST-12,result=low_voltage_or_open_phase,Moderate,validated,S-11,S-11 items 5 and 40,,,
+CF-16,confirmed_by,CAU-36,TST-10,result=insulation_low,Strong,validated,S-01,S-01 p.34,,,
+CF-17,confirmed_by,FLT-05,TST-02,result=out_of_tolerance,Strong,validated,S-01,S-01 p.34,,,
+CF-18,confirmed_by,FLT-07,TST-11,result=impeller_damaged,Moderate,validated,S-11,S-11 item 14,,,
+CF-19,confirmed_by,FLT-08,TST-11,result=impeller_blocked,Moderate,validated,S-11,S-11 items 7 and 21,,,
+CF-20,confirmed_by,FLT-01,TST-01,result=NPSHA_below_NPSH3_plus_margin,Strong,validated,S-02,S-02,,,
+CF-21,confirmed_by,CAU-39,TST-12,result=phase_imbalance,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:17,data/maintenance_actions.csv:17,,
+RC-01,recommends,FLT-01,ACT-01,sequence=1,Moderate,validated,S-11;S-10,S-11 item 13; S-10,data/maintenance_actions.csv:4,,
+RC-02,recommends,FLT-01,ACT-02,sequence=2,Strong,validated,S-01,S-01 p.35,data/maintenance_actions.csv:5,,
+RC-03,recommends,FLT-07,ACT-02,sequence=1,Strong,validated,S-01,S-01 p.35,data/maintenance_actions.csv:13,,
+RC-04,recommends,FLT-02,ACT-03,sequence=1,Moderate,validated,S-06;S-11,S-06; S-11 items 1 and 25,data/maintenance_actions.csv:10,,
+RC-05,recommends,FLT-03,ACT-04,sequence=1,Moderate,validated,S-11,S-11 item 8,data/maintenance_actions.csv:15,,
+RC-06,recommends,FLT-04,ACT-07,sequence=1,Strong,validated,S-01,S-01 pp.33-34,data/maintenance_actions.csv:2;data/maintenance_actions.csv:3,,
+RC-07,recommends,FLT-05,ACT-08,sequence=1,Strong,validated,S-01,S-01 pp.32 and 34,data/maintenance_actions.csv:6,,
+RC-08,recommends,FLT-06,ACT-09,sequence=1,Strong,validated,S-01,S-01 pp.34-35,data/maintenance_actions.csv:8,,
+RC-09,recommends,FLT-08,ACT-10,sequence=1,Moderate,validated,S-11,S-11 items 7 and 21,data/maintenance_actions.csv:7,,
+RC-10,recommends,FLT-09,ACT-12,sequence=1,Moderate,validated,S-07;S-09,S-07; S-09,data/maintenance_actions.csv:14,,
+RC-11,recommends,FLT-10,ACT-13,sequence=1,Strong,validated,S-01,S-01 pp.16 and 35,,,
+RC-12,recommends,FLT-11,ACT-14,sequence=1,Moderate,validated,S-11,S-11 item 40,data/maintenance_actions.csv:11;data/maintenance_actions.csv:17,,
+RC-13,recommends,FLT-12,ACT-15,sequence=1,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:12,data/maintenance_actions.csv:12,,
+RC-14,recommends,OUT-U,ACT-17,sequence=1,Definitional,not_applicable,P-05,KA-3 section 6,,,
+CO-01,corrects,ACT-01,CAU-01,,Moderate,validated,S-11,S-11 item 13,,,
+CO-02,corrects,ACT-01,CAU-02,,Moderate,validated,S-11,S-11 item 13,,,Cool the suction liquid
+CO-03,corrects,ACT-05,CAU-08,,Moderate,validated,S-11,S-11 item 16,,,
+CO-04,corrects,ACT-06,CAU-11,,Moderate,validated,S-11,S-11 item 22,,,
+CO-05,corrects,ACT-04,CAU-09,,Moderate,validated,S-11,S-11 item 8,,,
+CO-06,corrects,ACT-11,CAU-05,,Moderate,validated,S-11,S-11 items 3 and 15,data/maintenance_actions.csv:9,,Legacy A08
+CO-07,corrects,ACT-08,CAU-19,,Strong,validated,S-01,S-01 p.32,,,Proper pipe support
+CO-08,corrects,ACT-08,CAU-20,,Strong,validated,S-01,S-01 p.34,,,
+CO-09,corrects,ACT-16,CAU-21,,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:16,data/maintenance_actions.csv:16,,Legacy A15
+CO-10,corrects,ACT-12,CAU-32,,Moderate,validated,S-07,S-07,,,
+CO-11,corrects,ACT-07,CAU-12,,Strong,validated,S-01,S-01 pp.33-34,,,
+CO-12,corrects,ACT-07,CAU-13,,Strong,validated,S-01,S-01 p.33,,,
+CO-13,corrects,ACT-14,CAU-35,,Moderate,validated,S-11,S-11 item 40,,,
+CO-14,corrects,ACT-14,CAU-37,,Moderate,validated,S-11,S-11 item 40,,,
+CO-15,corrects,ACT-14,CAU-39,,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:17,data/maintenance_actions.csv:17,,Legacy A16
+CO-16,corrects,ACT-13,CAU-33,,Strong,validated,S-01,S-01 pp.16 and 35,,,
+CO-17,corrects,ACT-03,CAU-07,,Moderate,validated,S-11,S-11 items 1 and 25,,,
+PR-01,requires_precaution,ACT-02,SAF-03,,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:13,data/maintenance_actions.csv:13,,
+PR-02,requires_precaution,ACT-10,SAF-03,,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:7,data/maintenance_actions.csv:7,,
+PR-03,requires_precaution,ACT-13,SAF-03,,Unvalidated,unvalidated,P-05,KR-1,,,Extended by analogy from A06/A12 (pump must be opened)
+PR-04,requires_precaution,ACT-14,SAF-04,,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:17,data/maintenance_actions.csv:17,,
+PR-05,requires_precaution,FLT-02,SAF-01,,Moderate,validated,S-06;P-01,S-06; data/maintenance_actions.csv:10,data/maintenance_actions.csv:10,,
+PR-06,requires_precaution,FLT-09,SAF-02,,Moderate,validated,S-07,S-07,data/maintenance_actions.csv:14,,

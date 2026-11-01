@@ -1,0 +1,2 @@
+equipment_id,name,boundary,description,legacy_ids
+EQ-01,Centrifugal pump set,"Pump + electric motor + coupling + baseplate + adjacent suction/discharge piping and valves; external elements: supply tank/sump, electrical supply, process liquid",Single equipment class covered by this KBS (KA-3 decision D5); the legacy KB modelled one implicit pump,

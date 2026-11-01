@@ -1,0 +1,40 @@
+cause_id,name,category,legacy_ids,description
+CAU-01,Insufficient NPSH available,hydraulic_operating,,"Low suction pressure or level, high suction lift or suction losses"
+CAU-02,Liquid temperature above design,process,,Raises vapour pressure
+CAU-03,Operation far right of BEP (high flow),hydraulic_operating,,
+CAU-04,Operation at low flow / below Qmin,hydraulic_operating,,"Recirculation; throttled or oversized pump"
+CAU-05,Suction fouling / clogged strainer / obstructed foot valve,suction_system,F06,Legacy fault F06 converted to a cause
+CAU-06,Wrong pump selection,design,,
+CAU-07,No liquid supply / incomplete priming,supply,,
+CAU-08,Vortex at low liquid level / insufficient submergence,supply,,
+CAU-09,Air leak at suction piping or flanges,suction_system,,
+CAU-10,Air drawn in through packing (suction below atmospheric),sealing,,
+CAU-11,Gas or vapour in the liquid,process,,Includes vapour pockets in badly sloped suction piping
+CAU-12,Inadequate or wrong lubrication,lubrication,,Includes degraded lubricant
+CAU-13,Over-greasing,lubrication,,
+CAU-14,High bearing load,mechanical,,"Shaft deflection off-BEP, impeller unbalance, throttled operation"
+CAU-15,Contamination / inadequate bearing sealing,contamination,,
+CAU-16,Improper mounting or wrong fits,installation,,
+CAU-17,Material fatigue (end of life),wear,,
+CAU-18,Electrical current passing through bearing,electrical,,
+CAU-19,Pipe strain on casing,installation,,
+CAU-20,Motor shift / foundation movement,installation,,
+CAU-21,Base looseness / soft foot,installation,F13,Legacy fault F13 converted to a cause
+CAU-22,Uncompensated thermal growth / poor installation alignment,installation,,Dataset-only cause
+CAU-23,Seal-face contamination / debris,contamination,,
+CAU-24,Loss of seal lubrication (dry running / gas / evaporation),lubrication,,
+CAU-25,Improper seal installation / seal misalignment / shaft deflection,installation,,
+CAU-26,Loss of spring or bellows force,wear,,
+CAU-27,Abrasive particles in the liquid,process,,
+CAU-28,Seal flush failure,sealing,,
+CAU-29,Corrosion,process,,Aggravated by cavitation and oxygen (S-04)
+CAU-30,Foreign object impact,mechanical,,Dataset-only cause
+CAU-31,Debris / solids lodged in impeller or passages,contamination,,
+CAU-32,Discharge valve closed or partly closed / closed check valve,discharge_system,,Was part of the legacy F11 name
+CAU-33,Erosion of wear-ring clearances,wear,,
+CAU-34,Liquid heavier or more viscous than allowed,process,,
+CAU-35,Low supply voltage or frequency / open phase,electrical,,
+CAU-36,Winding insulation breakdown,electrical,,Accelerated by prolonged over-temperature (S-01 p.35)
+CAU-37,Poor motor ventilation,electrical,,
+CAU-38,Coupling element wear / looseness,mechanical,,
+CAU-39,Electrical supply imbalance,electrical,F14,Legacy fault F14 retained as a distinct cause of FLT-11 (KR-1 correction 2)

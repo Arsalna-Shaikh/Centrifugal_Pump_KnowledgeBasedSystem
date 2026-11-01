@@ -1,0 +1,5 @@
+safety_id,name,trigger_fault_ids,trigger_symptoms_all,trigger_action_ids,trigger_min_status,message,support_level,validation_status,source_ids,source_locator,legacy_ref
+SAF-01,Dry running stop,FLT-02,SYM-06;SYM-18,,pending,Stop or secure the pump according to site procedure; do not continue dry operation,Moderate,validated,S-06;P-01;P-02,S-06; data/maintenance_actions.csv:10; src/app.py:70,A09
+SAF-02,No continuous zero-flow operation,FLT-09,SYM-06,,likely,Do not run continuously at or near zero flow; restore flow to at least Qmin,Moderate,validated,S-07;S-09,S-07; S-09,A13
+SAF-03,Isolate before opening,,,ACT-02;ACT-10;ACT-13,,Isolate the pump before opening it,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:7; data/maintenance_actions.csv:13,A06;A12
+SAF-04,Qualified electrical personnel,,,ACT-14,,Electrical checks only by qualified electrical personnel,Unvalidated,unvalidated,P-01,data/maintenance_actions.csv:17,A16

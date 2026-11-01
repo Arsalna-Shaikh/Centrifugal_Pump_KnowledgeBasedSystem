@@ -1,0 +1,129 @@
+column,check,violations
+Record_ID,no nulls,0
+Record_ID,matches ^R-\d{6}$,0
+Pump_ID,no nulls,0
+Pump_ID,matches ^P-\d{3}$,0
+Pump_Type,no nulls,0
+Pump_Type,allowed values,0
+Manufacturer,no nulls,0
+Manufacturer,allowed values,0
+Installation_Date,no nulls,0
+Installation_Date,ISO date,0
+Observation_Date,no nulls,0
+Observation_Date,ISO date,0
+Maintenance_Date,nulls allowed,0
+Maintenance_Date,ISO date,0
+Operating_Hours,no nulls,0
+Operating_Hours,"numeric in (0, 200000)",0
+Fault_Type,no nulls,0
+Fault_Type,allowed values,0
+Fault_Severity,no nulls,0
+Fault_Severity,allowed values,0
+Diagnostic_Status,no nulls,0
+Diagnostic_Status,allowed values,0
+Maintenance_Priority,no nulls,0
+Maintenance_Priority,allowed values,0
+Downtime_Hours,nulls allowed,0
+Downtime_Hours,"numeric in (0, 2000)",0
+Maintenance_Cost,nulls allowed,0
+Maintenance_Cost,"numeric in (0, 500000)",0
+Flow_Pct_Rated,nulls allowed,0
+Flow_Pct_Rated,"numeric in (0, 160)",0
+Head_Pct_Rated,nulls allowed,0
+Head_Pct_Rated,"numeric in (0, 200)",0
+Current_Pct_Rated,nulls allowed,0
+Current_Pct_Rated,"numeric in (0, 200)",0
+Partition,no nulls,0
+Partition,allowed values,0
+Vibration_Zone,no nulls,0
+Vibration_Zone,allowed values,0
+Vibration_mm_s,no nulls,0
+Vibration_mm_s,"numeric in (0.05, 50)",0
+Bearing_Temperature_C,no nulls,0
+Bearing_Temperature_C,"numeric in (-10, 150)",0
+Seal_Temperature_C,no nulls,0
+Seal_Temperature_C,"numeric in (-10, 200)",0
+Motor_Temperature_C,no nulls,0
+Motor_Temperature_C,"numeric in (-10, 180)",0
+Flow_Rate,no nulls,0
+Flow_Rate,"numeric in (0, 2000)",0
+Suction_Pressure,no nulls,0
+Suction_Pressure,"numeric in (0.01, 10)",0
+Discharge_Pressure,no nulls,0
+Discharge_Pressure,"numeric in (0.01, 60)",0
+Motor_Current,no nulls,0
+Motor_Current,"numeric in (0.5, 400)",0
+Motor_Speed_RPM,no nulls,0
+Motor_Speed_RPM,"numeric in (300, 3600)",0
+Pressure_Fluctuation,no nulls,0
+Pressure_Fluctuation,"numeric in (0, 100)",0
+Noise_Level,no nulls,0
+Noise_Level,"numeric in (30, 130)",0
+sens_vibration_high,nulls allowed,0
+sens_vibration_high,"in {0,1,<NA>}",0
+sens_bearing_temp_high,nulls allowed,0
+sens_bearing_temp_high,"in {0,1,<NA>}",0
+sens_seal_temp_high,nulls allowed,0
+sens_seal_temp_high,"in {0,1,<NA>}",0
+sens_motor_temp_high,nulls allowed,0
+sens_motor_temp_high,"in {0,1,<NA>}",0
+sens_flow_low,nulls allowed,0
+sens_flow_low,"in {0,1,<NA>}",0
+sens_no_flow,nulls allowed,0
+sens_no_flow,"in {0,1,<NA>}",0
+sens_discharge_pressure_low,nulls allowed,0
+sens_discharge_pressure_low,"in {0,1,<NA>}",0
+sens_discharge_pressure_high,nulls allowed,0
+sens_discharge_pressure_high,"in {0,1,<NA>}",0
+sens_suction_pressure_low,nulls allowed,0
+sens_suction_pressure_low,"in {0,1,<NA>}",0
+sens_motor_current_high,nulls allowed,0
+sens_motor_current_high,"in {0,1,<NA>}",0
+sens_pressure_fluctuation,nulls allowed,0
+sens_pressure_fluctuation,"in {0,1,<NA>}",0
+sens_noise_high,nulls allowed,0
+sens_noise_high,"in {0,1,<NA>}",0
+sens_speed_deviation,nulls allowed,0
+sens_speed_deviation,"in {0,1,<NA>}",0
+obs_vibration_high,nulls allowed,0
+obs_vibration_high,"in {0,1,<NA>}",0
+obs_bearing_temp_high,nulls allowed,0
+obs_bearing_temp_high,"in {0,1,<NA>}",0
+obs_seal_temp_high,nulls allowed,0
+obs_seal_temp_high,"in {0,1,<NA>}",0
+obs_motor_temp_high,nulls allowed,0
+obs_motor_temp_high,"in {0,1,<NA>}",0
+obs_flow_low,nulls allowed,0
+obs_flow_low,"in {0,1,<NA>}",0
+obs_no_flow,nulls allowed,0
+obs_no_flow,"in {0,1,<NA>}",0
+obs_discharge_pressure_low,nulls allowed,0
+obs_discharge_pressure_low,"in {0,1,<NA>}",0
+obs_discharge_pressure_high,nulls allowed,0
+obs_discharge_pressure_high,"in {0,1,<NA>}",0
+obs_suction_pressure_low,nulls allowed,0
+obs_suction_pressure_low,"in {0,1,<NA>}",0
+obs_motor_current_high,nulls allowed,0
+obs_motor_current_high,"in {0,1,<NA>}",0
+obs_pressure_fluctuation,nulls allowed,0
+obs_pressure_fluctuation,"in {0,1,<NA>}",0
+obs_noise_high,nulls allowed,0
+obs_noise_high,"in {0,1,<NA>}",0
+obs_grinding_noise,nulls allowed,0
+obs_grinding_noise,"in {0,1,<NA>}",0
+obs_crackling_noise,nulls allowed,0
+obs_crackling_noise,"in {0,1,<NA>}",0
+obs_seal_leakage,nulls allowed,0
+obs_seal_leakage,"in {0,1,<NA>}",0
+obs_coupling_vibration,nulls allowed,0
+obs_coupling_vibration,"in {0,1,<NA>}",0
+obs_air_bubbles,nulls allowed,0
+obs_air_bubbles,"in {0,1,<NA>}",0
+obs_prime_failure,nulls allowed,0
+obs_prime_failure,"in {0,1,<NA>}",0
+obs_rapid_temp_rise,nulls allowed,0
+obs_rapid_temp_rise,"in {0,1,<NA>}",0
+obs_speed_unstable,nulls allowed,0
+obs_speed_unstable,"in {0,1,<NA>}",0
+Record_ID,unique,0
+Pump_ID,in exactly one partition,0

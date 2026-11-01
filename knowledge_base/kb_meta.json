@@ -1,0 +1,113 @@
+{
+  "name": "Centrifugal Pump KBS - structured knowledge base",
+  "version": "1.0.0-kr1",
+  "created_for": "CT-359 Knowledge Based System, stage KR-1",
+  "design_reference": "knowledge_acquisition/ka3_final_knowledge_model.md (with KR-1 corrections 1-4)",
+  "kr1_corrections": {
+    "1": "flow_fluctuation (SYM-22) and pressure_fluctuation (SYM-12) are separate symptoms with separate indicators (IND-10, IND-09)",
+    "2": "Legacy F08 and F14 merged into FLT-11 Motor fault; electrical supply imbalance retained as distinct cause CAU-39",
+    "3": "Indicators support absolute, pct_rated and pct_baseline bases; thresholds declare their basis; equipment_parameters holds rated and healthy-baseline references",
+    "4": "Knowledge support quality (support_level, validation_status) is recorded separately from diagnostic likelihood (rule conclusion likelihood)"
+  },
+  "vocabularies": {
+    "support_level": {
+      "Strong": "Stated by an independent source that was read (standards body, Hydraulic Institute, DOE/HI)",
+      "Moderate": "Stated only by a manufacturer or trade source that was read",
+      "Unvalidated": "Only in project sources (legacy KB, synthetic dataset, design documents) or no source read",
+      "Disputed": "Contradicted by an independent source in the stated context",
+      "Definitional": "True by definition or design decision; no external evidence needed"
+    },
+    "validation_status": ["validated", "unvalidated", "disputed", "not_applicable"],
+    "likelihood": {
+      "confirmed": "A confirming diagnostic test result matched",
+      "likely": "Pattern is characteristic of the conclusion",
+      "possible": "Pattern is compatible with the conclusion but not characteristic",
+      "not_applicable": "Rule does not conclude a hypothesis (negative evidence, blocking, test requests)"
+    },
+    "observation_state": ["present", "absent", "unknown"],
+    "result_status": ["confirmed", "likely", "possible", "pending", "unlikely", "blocked"],
+    "measurement_basis": {
+      "absolute": "Value in engineering units",
+      "pct_rated": "Value as % of the equipment's rated parameter",
+      "pct_baseline": "Value as % of the equipment's healthy-baseline parameter"
+    },
+    "relationship_types": {
+      "has_component": ["equipment", "component"],
+      "measured_on": ["indicator", "component"],
+      "implies": ["symptom", "symptom"],
+      "excludes": ["symptom", "symptom"],
+      "fault_located_in": ["fault", "component"],
+      "manifests_as": ["fault", "symptom"],
+      "indicated_by": ["cause", "symptom"],
+      "argues_against": ["symptom", "fault"],
+      "caused_by": ["fault", "cause"],
+      "cause_located_at": ["cause", "component|equipment"],
+      "leads_to": ["fault", "fault"],
+      "confirmed_by": ["cause|fault", "test"],
+      "recommends": ["fault", "action"],
+      "corrects": ["action", "cause"],
+      "requires_precaution": ["action|fault", "safety"]
+    },
+    "cost_downtime_class": {
+      "LOW": "Legacy qualitative class (data/faults.csv, data/maintenance_actions.csv)",
+      "MEDIUM": "Legacy qualitative class",
+      "HIGH": "Legacy qualitative class",
+      "LOW-MEDIUM": "Range: the record merges legacy records whose classes differ (lowest to highest of them)",
+      "MEDIUM-HIGH": "Range: the record merges legacy records whose classes differ (lowest to highest of them)",
+      "UNKNOWN": "No legacy or researched source gives a value",
+      "NOT_APPLICABLE": "Diagnostic outcome, not a maintenance task"
+    },
+    "maintenance_priority": {
+      "P1-immediate": "make_safe action, or an action for a fault that has an active operating safety warning",
+      "P2-high": "Action for at least one confirmed or likely fault or root cause",
+      "P3-planned": "Any other recommended action (only possible hypotheses, or further investigation)"
+    },
+    "rule_layers": ["L2_fault", "L2_negative", "L3_cause", "L3_chain", "L4_test_request"],
+    "assumption_types": {
+      "exclusion": "An absent-condition used only to keep competing faults out; does not lower rule support",
+      "discriminator": "An unvalidated condition the rule's conclusion depends on; rule support must then be Unvalidated"
+    }
+  },
+  "policies": {
+    "unknown_is_not_absent": true,
+    "derived_symptom_from_imputed_value": "unknown",
+    "threshold_selection": "Use the default threshold for the most specific basis whose reference parameter is available: pct_baseline, then pct_rated, then absolute",
+    "likelihood_display_cap": {
+      "enabled": true,
+      "rule": "If a rule's support_level is Unvalidated, its conclusion is reported at most as 'possible' and labelled unvalidated. The stored likelihood is not changed."
+    },
+    "negative_evidence": "A 'lower' conclusion reduces a hypothesis by one result_status level (likely -> possible -> unlikely)",
+    "safety_rules": "Evaluated for every hypothesis at or above trigger_min_status, independent of ranking",
+    "ranking": "Within a result_status, order by support_level of the best fired rule, then number of fired rules, then hazard_class",
+    "cost_and_downtime": {
+      "rule": "Faults and maintenance actions carry qualitative cost_class and downtime_class only. Values are inherited from the legacy KB (P-01) and are Unvalidated; no monetary or time values are given because no source provides them.",
+      "support_level": "Unvalidated",
+      "source_ids": ["P-01"]
+    },
+    "maintenance_priority": {
+      "rule": "Assigned per recommended action by the decision-support layer using the maintenance_priority vocabulary. It uses only operating safety warnings, action purpose and the diagnostic status of the faults/causes the action addresses. It does not use hazard_class, cost or downtime, and it never changes diagnostic results. Within a level, actions keep the engine order (legacy sequence, then id).",
+      "support_level": "Unvalidated",
+      "source_ids": ["P-05"],
+      "note": "Project design policy (Step 1); not validated against site maintenance practice"
+    }
+  },
+  "files": {
+    "sources.csv": "Source register (S, L, P ids)",
+    "equipment.csv": "Equipment classes",
+    "equipment_parameters.csv": "Rated, baseline and limit parameters per equipment",
+    "components.csv": "Components and external elements",
+    "indicators.csv": "Measured quantities and supported measurement bases",
+    "thresholds.csv": "Indicator -> symptom thresholds with basis and provenance",
+    "symptoms.csv": "Symptom vocabulary",
+    "faults.csv": "Faults and outcomes with hazard class provenance",
+    "root_causes.csv": "Root causes",
+    "diagnostic_tests.csv": "Diagnostic tests and their result values",
+    "maintenance_actions.csv": "Maintenance actions",
+    "safety_rules.csv": "Safety rules (override)",
+    "relationships.csv": "All typed relationships with provenance and validation status",
+    "diagnostic_rules.json": "Diagnostic, negative, cause, chain and test-request rules",
+    "legacy_mapping.csv": "Crosswalk from the legacy KB IDs",
+    "validate_kb.py": "Stdlib-only validator",
+    "VALIDATION_REPORT.md": "Generated by validate_kb.py"
+  }
+}

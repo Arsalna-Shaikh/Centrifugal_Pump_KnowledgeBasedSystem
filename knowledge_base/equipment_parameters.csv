@@ -1,0 +1,13 @@
+parameter_id,equipment_id,name,unit,value_type,allowed_values,required,role,source_ids,source_locator,notes
+PAR-01,EQ-01,pump_design,,enum,radial;mixed;axial,yes,context,S-01,S-01 p.17,Motor power/current vs flow differs between radial and axial pumps
+PAR-02,EQ-01,rated_flow,m3/h,number,,optional,rated_reference,P-05,KA-3 D3,Reference for pct_rated flow indicators
+PAR-03,EQ-01,rated_differential_pressure,bar,number,,optional,rated_reference,P-05,KA-3 D3,Reference for pct_rated head indicators
+PAR-04,EQ-01,rated_motor_current,A,number,,optional,rated_reference,P-05,KA-3 D3,Reference for pct_rated current indicators
+PAR-05,EQ-01,rated_speed,rpm,number,,optional,rated_reference,P-05,KA-3 D3,
+PAR-06,EQ-01,minimum_flow_qmin,m3/h,number,,optional,limit,S-09,S-09,Pump-specific minimum continuous flow from data sheet
+PAR-07,EQ-01,npsh3_at_duty,m,number,,optional,limit,S-02,S-02,Needed for the NPSH margin test (TST-01)
+PAR-08,EQ-01,baseline_flow,m3/h,number,,optional,baseline_reference,P-02,src/app.py:25,Healthy-baseline reference (legacy app used % of healthy baseline)
+PAR-09,EQ-01,baseline_differential_pressure,bar,number,,optional,baseline_reference,P-05,KR-1 correction 3,Healthy-baseline reference
+PAR-10,EQ-01,baseline_motor_current,A,number,,optional,baseline_reference,P-05,KR-1 correction 3,Healthy-baseline reference
+PAR-11,EQ-01,baseline_vibration,mm/s RMS,number,,optional,baseline_reference,S-01,S-01 p.36,Vibration is compared with a baseline taken when the machine was healthy
+PAR-12,EQ-01,design_liquid_temperature,degC,number,,optional,limit,S-01,S-01 p.20,Higher-than-design temperature is a cavitation cause

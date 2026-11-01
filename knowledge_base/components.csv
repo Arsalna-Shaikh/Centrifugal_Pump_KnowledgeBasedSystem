@@ -1,0 +1,15 @@
+component_id,name,kind,equipment_id,legacy_ids,description
+CMP-01,Casing / volute,pump,EQ-01,C01,Contains the liquid and converts velocity to pressure
+CMP-02,Impeller,pump,EQ-01,C02,Transfers rotational energy to the liquid
+CMP-03,Wear rings,pump,EQ-01,,Set clearances between impeller and casing (S-01 pp.16 and 35); new in KR-1
+CMP-04,Shaft,pump,EQ-01,C03,Transmits torque from driver to impeller
+CMP-05,Bearings and lubricant,pump,EQ-01,C04,Support the shaft; lubricant included
+CMP-06,Mechanical seal / packing,pump,EQ-01,C05,Seals the shaft penetration
+CMP-07,Coupling,drive_train,EQ-01,C06,Connects motor shaft to pump shaft
+CMP-08,Electric motor,driver,EQ-01,C09,"Driver, including windings and cooling"
+CMP-09,Baseplate / foundation,structure,EQ-01,C10,Maintains alignment and rigidity
+CMP-10,Suction line,piping,EQ-01,C07,"Suction piping, strainer, suction valve, flanges, foot valve"
+CMP-11,Discharge line,piping,EQ-01,C08,"Discharge piping, discharge valve, check valve"
+EXT-01,Supply tank / sump,external,EQ-01,,Liquid source and liquid level
+EXT-02,Electrical supply,external,EQ-01,,Voltage/frequency/phases feeding the motor
+EXT-03,Process liquid,external,EQ-01,,"Liquid properties: temperature, gas content, solids, density, viscosity"

@@ -1,0 +1,13 @@
+test_id,name,measures,result_values,support_level,validation_status,source_ids,source_locator
+TST-01,NPSH margin check,NPSH available compared with NPSH3 / NPSHR plus margin,NPSHA_below_NPSH3_plus_margin;margin_adequate,Strong,validated,S-02;S-05;S-10,S-02; S-05; S-10
+TST-02,Alignment check (dial indicator TIR or laser),Shaft offset and angularity at the coupling,out_of_tolerance;within_tolerance,Strong,validated,S-01;S-13,S-01 p.34; S-13
+TST-03,Vibration analysis against baseline,Vibration signature compared with a healthy baseline,abnormal_vs_baseline;normal,Strong,validated,S-01,S-01 pp.34-36
+TST-04,Oil analysis,Lubricant condition and wear debris,lubricant_degraded;contamination_found;normal,Strong,validated,S-01,S-01 pp.16 and 36
+TST-05,Infrared thermography,Hot spots on bearings and motor,hot_spot;normal,Strong,validated,S-01,S-01 p.36
+TST-06,Seal leakage measurement,Leakage rate compared with manufacturer specification,leakage_above_spec;within_spec,Strong,validated,S-01,S-01 p.34
+TST-07,Suction-line leak test,Air leaks at suction flanges and piping,leak_found;no_leak,Moderate,validated,S-11,S-11 item 8
+TST-08,Liquid level / submergence check,Supply level and vortex formation at suction inlet,low_level_or_vortex;adequate,Strong,validated,S-01;S-11,S-01 p.31; S-11 item 16
+TST-09,Performance test against pump curve,Flow and head compared with the pump curve,below_curve;on_curve,Strong,validated,S-01,S-01 p.35
+TST-10,Motor insulation resistance test,Winding insulation condition,insulation_low;normal,Strong,validated,S-01,S-01 p.34
+TST-11,Internal inspection,"Impeller, wear rings, passages and suction strainer",strainer_clogged;impeller_damaged;impeller_blocked;wear_ring_clearance_excessive;normal,Strong,validated,S-01;S-11,S-01 p.35; S-11 items 7 14 21
+TST-12,Electrical supply check,"Supply voltage, frequency and phases",low_voltage_or_open_phase;phase_imbalance;normal,Moderate,validated,S-11,S-11 items 5 and 40

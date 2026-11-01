@@ -1,0 +1,16 @@
+{
+  "structural_checks_failed": 0,
+  "reference_rows": 7210,
+  "cleaned_rows": 7210,
+  "ids_missing_from_cleaned": 0,
+  "ids_not_in_reference": 0,
+  "cells_evaluated": 7602,
+  "cells_wrong": 0,
+  "exact_duplicates_injected": 108,
+  "exact_duplicates_remaining": 0,
+  "near_duplicates_injected": 36,
+  "near_duplicates_removed": 36,
+  "genuine_values_wrongly_nullified": 0,
+  "fault_labels_changed": 49,
+  "fault_labels_changed_other_than_missing_to_unknown": 0
+}

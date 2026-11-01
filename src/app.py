@@ -5,6 +5,8 @@ from inference_engine import diagnose_from_sensor, load_knowledge
 st.set_page_config(page_title="Centrifugal Pump KBS", page_icon="⚙️", layout="wide")
 st.title("⚙️ Centrifugal Pump Fault Diagnosis KBS")
 st.caption("CT-359 Knowledge Based System — academic prototype. Thresholds are demo defaults, not OEM safety limits.")
+st.info("LEGACY ENGINE (weighted evidence scoring, kept for comparison). The new forward-chaining KBS is on the "
+        "**New KBS Diagnosis** page in the sidebar.")
 
 faults, weights, actions, symptoms, rules = load_knowledge()
 
